@@ -13,19 +13,7 @@ export default function LoginPane() {
     <CssVarsProvider defaultMode='dark'>
       <main>
         <Sheet
-          sx={{
-            width: '30%',
-            ml: '0', // margin left & right
-            height: '100vh',
-            py: 3, // padding top & bottom
-            px: 10, // padding left & right
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            gap: 2,
-            zIndex: 2,
-            boxShadow: 'md',
-          }}
+          className="loginPaneLeftSide"
           variant="plain"
         >
           <div>
@@ -63,16 +51,7 @@ export default function LoginPane() {
           </Typography>
         </Sheet>
         <Sheet
-          sx={{
-            width: '70%',
-            position: 'absolute',
-            right: '0',
-            top: '0',
-            backgroundPositionX: '50%',
-            backgroundPositionY: '50%',
-            height: '100vh',
-            backgroundImage: 'url(/LoginPane.jpeg)',
-          }}
+          className="loginPaneRightSide"
         >
           <span style={{
             position: 'absolute',
