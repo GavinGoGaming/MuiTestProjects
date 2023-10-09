@@ -18,7 +18,6 @@ export default function Page() {
     <CssVarsProvider defaultMode='dark'>
     <Navigation/>
     <Sheet>
-      
       <Head>
         <title>About Bailey | Klash</title>
       </Head>
