@@ -1,5 +1,8 @@
 'use client';
-import { CssVarsProvider, Sheet, Tab, TabList, Tabs } from '@mui/joy'
+import Boxgen from '@/sections/Boxgen';
+import Chatbot from '@/sections/Chatbot';
+import Vision from '@/sections/Vision';
+import { Breadcrumbs, CssVarsProvider, Link, Sheet, Tab, TabList, Tabs, Typography } from '@mui/joy'
 import React from 'react';
 export default function ChatBot() {
     const [index, setIndex] = React.useState(0);
@@ -42,13 +45,37 @@ export default function ChatBot() {
           </TabList>
         </Tabs>
         <Sheet className="content content-0" sx={{padding: '20px'}}>
-            <h1>AI Chatbot</h1>
+            <Breadcrumbs separator="›" aria-label="breadcrumbs">
+              {['Brainbase', 'AI Utilities'].map((item: string) => (
+                <Link key={item} color="neutral" href="#">
+                  {item}
+                </Link>
+              ))}
+              <Typography>Chatbot</Typography>
+            </Breadcrumbs>
+            <Chatbot/>
         </Sheet>
         <Sheet className="content content-1 hidden" sx={{padding: '20px'}}>
-            <h1>Vision (AI Image Gen)</h1>
+            <Breadcrumbs separator="›" aria-label="breadcrumbs">
+              {['Brainbase', 'AI Utilities'].map((item: string) => (
+                <Link key={item} color="neutral" href="#">
+                  {item}
+                </Link>
+              ))}
+              <Typography>Vision</Typography>
+            </Breadcrumbs>
+            <Vision/>
         </Sheet>
         <Sheet className="content content-2 hidden" sx={{padding: '20px'}}>
-            <h1>Boxgen (Mass Generation)</h1>
+            <Breadcrumbs separator="›" aria-label="breadcrumbs">
+              {['Brainbase', 'AI Utilities'].map((item: string) => (
+                <Link key={item} color="neutral" href="#">
+                  {item}
+                </Link>
+              ))}
+              <Typography>Boxgen</Typography>
+            </Breadcrumbs>
+            <Boxgen/>
         </Sheet>
         </Sheet>
     )

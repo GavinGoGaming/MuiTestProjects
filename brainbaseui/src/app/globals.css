@@ -13,6 +13,26 @@
   display: flex;
   flex-direction: column;
 }
+.chatbox-controls > input {
+  width: 70%;
+  margin-left: 10%;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-left: 15px;
+}
+.chatbox-right {
+  width: calc(30% - 15px);
+  margin-left: 10px;
+  padding-left: 5px;
+  height: 100%;
+  float: right;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border-radius: 15px;
+}
 .chatbox_zone {
   height:calc(100vh - 20px);
   margin:10px;
@@ -25,7 +45,68 @@
 .nav_big > button > i {
   margin-right: 10px;
 }
-@media only screen and (max-width: 780px) {
+#quick {
+  display: none;
+}
+.chatbox-right {
+  display: block;
+  position: relative;
+}
+.skele_loading {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  margin: 0;
+}
+.mobileonly {
+  display: none;
+}
+@media only screen and (max-width: 825px) {
+  #quick {
+    display: block;
+    margin-top: 0;
+  }
+  .mobileonly {
+    display: block;
+  }
+  .chatbox-right {
+    width: calc(100%);
+    height: 100%;
+    float: none;
+  }
+  .chatbox-right > * {
+    position: absolute;
+  }
+  .chatbox-right > div {
+    margin-top: 30px;
+    width: 98%;
+  }
+
+  .bottom-sticky {
+    bottom: 10px;
+    position: absolute;
+    z-index: 3;
+    margin-left: 8%;
+    width: 80%;
+  }
+  .chatbox-controls > input {
+    width: 60%;
+    margin-left: 5%;
+    height: 80%;
+  }
+  .chatbox-controls > button#send_message {
+    width: 30%;
+  }
+  .chatbox-right {
+    display: none;
+  }
+  .chatbox-left {
+    width: 100% !important;
+  }
   .nav_small {
     display: flex;
   }
@@ -56,8 +137,8 @@
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
   --foreground-rgb: 19, 14, 1;
-  --background-start-rgb: 255, 246, 240;
-  --background-end-rgb: 255, 246, 240;
+  --background-start-rgb: 226, 226, 226;
+  --background-end-rgb: 226, 226, 226;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -93,8 +174,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 254, 249, 236;
-    --background-start-rgb: 16, 7, 0;
-    --background-end-rgb: 16, 7, 0;
+    --background-start-rgb: 28, 28, 28;
+    --background-end-rgb: 28, 28, 28;
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
@@ -121,6 +202,56 @@
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
+}
+
+.chat-bubble {
+  width:100%;
+  height: fit-content;
+  position: relative;
+  min-height: 50px;
+}
+.chat-bubble > .bubblecontent {
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: 5px;
+  width: fit-content;
+  position: relative;
+}
+
+.chat-bubble.ai > .bubblecontent {
+  background-color: #4935ff;
+  border-bottom-left-radius: 0px;
+}
+.chat-bubble.user > .bubblecontent {
+  background-color: #444;
+  border-bottom-right-radius: 0px;
+  float: right;
+}
+.chatbox-left {
+  width: 70%;
+  float: left;
+  height: 100%;
+}
+.chatbox-messages {
+  height: 80%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+}
+.chatbox-messages::-webkit-scrollbar {
+  display: none;
+}
+.chatbox-controls {
+  margin-top: 20px;
+  height: 10%;
+  width: 100%;
+}
+
+.content {
+  height: 90%;
+}
+.content > div {
+  height: 100%;
 }
 
 * {
@@ -163,4 +294,11 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+
+
+
+.visible {
+  display: block !important;
 }

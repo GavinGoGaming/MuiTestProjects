@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "Running project \"$1\" through [brainbase/bb/br]"
+if [ "brainbase" == "$1" ] || [ "br" == "$1" ] || [ "bb" == "$1" ]; then
+    echo "Detected query as Brainbase. Running the UI Project."
+    if [ "$PWD" != "brainbaseui" ]; then
+        cd brainbaseui
+    fi
+    npm run dev
+else
+    echo "No query detected."
+    echo "Expected [brainbase/bb/brr]"
+fi
