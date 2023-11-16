@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Running project \"$1\" through [brainbase/bb/br]"
+echo "Running project \"$1\" through selector [brainbase/bb/br/ss/shkr/shkrmishstore]."
 if [ "brainbase" == "$1" ] || [ "br" == "$1" ] || [ "bb" == "$1" ]; then
     echo "Detected query as Brainbase. Running the UI Project."
     if [ "$PWD" != "brainbaseui" ]; then
@@ -8,9 +8,9 @@ if [ "brainbase" == "$1" ] || [ "br" == "$1" ] || [ "bb" == "$1" ]; then
     npm run dev
 else
     if [ "shkrmishstore" == "$1" ] || [ "shkr" == "$1" ] || [ "ss" == "$1" ]; then
-        echo "Detected query as Shkrmishstore. Running the UI Project."
+        echo "Detected query as Shkrmishstore. Running UI Frontend."
         if [ "$PWD" != "shkrmishstore" ]; then
-            cd brainbaseui
+            cd shkrmishstore
         fi
         npm run dev
     else
