@@ -1,4 +1,4 @@
-# MuiTP
+# Klash WebCache
 I love the way MUI's libraries look - time to use them.
 
 This one project provides the source for @klashdevelopment's website, shkrmishstore, and brainbase's frontend redesign.
