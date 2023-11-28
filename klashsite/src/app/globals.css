@@ -1,3 +1,5 @@
+@import url('https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css');
+
 .creditLink {
   color: #333;
 }
@@ -34,7 +36,7 @@
   font-size: 26px;
 }
 
-.hoverUnderline:hover::after {
+/* .hoverUnderline:hover::after {
   content: "";
   background-color: rgb(201, 243, 255);
   width: 100%;
@@ -42,11 +44,85 @@
   top: 80%;
   display: block;
   position: absolute;
-}
+} */
 
+.icp_image {
+  border-radius: 12px;
+  height: 100%;
+  position:relative;
+  transition: all 0.25s ease-in-out;
+}
+.icp_image:hover {
+  transform: scale(1.05);
+}
+.icp_image > img {
+  z-index: 1;
+  border-radius: 12px;
+  position: relative;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+.icp_image > .icp_border {
+  width: calc(100% + 6px);
+  height: calc(100% - 2px);
+  z-index: 0;
+  top: 0;
+  border-radius: 15px;
+  left: 0;
+  display: block;
+  position: absolute;
+}
+.icpright {
+  text-align: right;
+  margin-right: 30px;
+}
+.icpleft {
+  text-align: left;
+  margin-left: 30px;
+}
+.mobile-prop-inner {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.icp_image {
+  height: auto !important;
+}
+/* @media only screen and (max-width: 950px) {
+  .icp_image {
+    height: auto !important;
+  }
+} */
 @media only screen and (max-width: 780px) {
   .loginPaneRightSide {
     display: none;
+  }
+  .mobile-prop, .mobile-prop-inner {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .mobile-prop > div:not(.dontDisplayOnMobile), .mobile-prop-inner > div:not(.dontDisplayOnMobile) {
+    width: 100% !important;
+  }
+  /* .icp_content_box > p {
+    width: 80%;
+  } */
+  #title {
+    font-size: 30px;
+  }
+  #navbuttons {
+    display: none !important;
+  }
+  #menunavbuttons {
+    display: inline-block !important;
+  }
+  .icp_image {
+    display: none;
+  }
+  .icp_content_box {
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 20px;
   }
 
   .dontDisplayOnMobile {
@@ -117,8 +193,8 @@
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb:	251, 252, 254;
+  --background-end-rgb: 251, 252, 254;
 
   --primary-glow: conic-gradient(from 180deg at 50% 50%,
       #16abff33 0deg,
@@ -145,11 +221,10 @@
   --card-border-rgb: 131, 134, 135;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+  html[data-joy-color-scheme = "dark"] {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb:	11, 13, 14;
+    --background-end-rgb:	11, 13, 14;
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(to bottom right,
@@ -172,7 +247,6 @@
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
-}
 
 * {
   box-sizing: border-box;

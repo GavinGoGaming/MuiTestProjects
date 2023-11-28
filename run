@@ -16,5 +16,10 @@ else
     else
         echo "No query detected."
         echo "Expected [brainbase/bb/brr] [shkrmishstore/ss/shkr]"
+        echo "Trying $1"
+        if [ "$PWD" != "$1" ]; then
+            cd "$1"
+        fi
+        npm run dev
     fi
 fi

@@ -14,7 +14,6 @@ import Link from '@mui/joy/Link';
 
 export default function WorkerBox(props: {color: string, name: string, imageUrl: string, title: string, blurb: string, url: string}) {
   return (
-    <CssVarsProvider defaultMode='dark'>
      <Sheet className="wbhg" onClick={function(){window.location.href=props.url}} sx={{
       width: '150px',
       height: '150px',
@@ -58,7 +57,6 @@ export default function WorkerBox(props: {color: string, name: string, imageUrl:
     <h3
       style={{
         padding: '10px',
-        color: 'white',
         width: '250px',
       }}
     >
@@ -69,13 +67,12 @@ export default function WorkerBox(props: {color: string, name: string, imageUrl:
     <p
       style={{
         padding: '10px',
-        color: 'white',
         width: '200%',
       }}
     >
       {props.blurb}
     </p>
   </div>
-    </Sheet></CssVarsProvider>
+    </Sheet>
   );
 }

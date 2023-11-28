@@ -13,7 +13,6 @@ var jfux = `data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBgVF
 
 export default function WorkersPane() {
   return (
-    <CssVarsProvider defaultMode='dark'><main>
      <Sheet sx={{
       width: '100%',
       display: 'flex',
@@ -31,6 +30,5 @@ export default function WorkersPane() {
         <WorkerBox blurb="Head UI/UX Design consultant for Klash." color="#B4DA55" name="Jon Fox" url="https://jonfoxux.com" imageUrl={jfux} title='UX/UI'/>
         <WorkerBox blurb="Lead officer for storyboarding & developer/builder here at Klash." color="#b30202" name="Reality" url="/personal/reality" imageUrl="https://cdn.discordapp.com/avatars/799351261903454238/b07ed2d7a57c2d42eb5fd87df7a9d998.webp?size=128" title='STORY/DEV'/>
     </Sheet>
-   </main></CssVarsProvider>
   );
 }
