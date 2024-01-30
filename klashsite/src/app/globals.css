@@ -100,7 +100,7 @@
     margin-left: 0 !important;
     width: 100% !important;
   }
-  .mobile-prop > div:not(.dontDisplayOnMobile), .mobile-prop-inner > div:not(.dontDisplayOnMobile) {
+  .mobile-prop > div:not(.dontDisplayOnMobil), .mobile-prop-inner > div:not(.dontDisplayOnMobil) {
     width: 100% !important;
   }
   /* .icp_content_box > p {
@@ -115,8 +115,12 @@
   #menunavbuttons {
     display: inline-block !important;
   }
-  .icp_image {
-    display: none;
+  .mobile-prop-inner {
+    display: block !important;
+  }
+  .dontDisplayOnMobil {
+    width: 80% !important;
+    margin-left: 8% !important;
   }
   .icp_content_box {
     width: 100%;

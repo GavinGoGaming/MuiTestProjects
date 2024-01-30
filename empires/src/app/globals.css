@@ -191,6 +191,13 @@ iframe {
     font-size:24px !important;
     top: 120px !important;
   }
+  .bigsizemobile  {
+    font-size: 24px !important;
+    height: 40px;
+    padding: 20px 30px !important;
+    border-radius: 20px;
+    width: 90px !important;
+  }
   .deschome.promo {
     width: 90vw;
   }

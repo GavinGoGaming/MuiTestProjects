@@ -5,4 +5,13 @@ This one project provides the source for @klashdevelopment's website, shkrmishst
 
 Add the root directory to your path if you are on linux! It will let you use the `run` builtin script to quickrun project using it's command.
 
-Usage is `run <project>`. Project can be brainbaseui (brainbase/bb/br), shkrmishstore/ss/shkr, placeholder (placeholder/p), placeholder (placeholder/p), or placeholder (placeholder/p).
+Usage is `run <project> [type]`. Project can be:
+- klashsite (klash, k, ks)
+- shkrmishstore (shkr, ss)
+- brainbaseui (bb, br)
+- empires (de)
+
+while type can be:
+- run (or no 2nd arg)
+- launch (Launches new app with fly)
+- deploy (Deploys update to existing app with fly)

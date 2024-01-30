@@ -1,25 +1,64 @@
 #!/bin/bash
-echo "Running project \"$1\" through selector [brainbase/bb/br/ss/shkr/shkrmishstore]."
-if [ "brainbase" == "$1" ] || [ "br" == "$1" ] || [ "bb" == "$1" ]; then
-    echo "Detected query as Brainbase. Running the UI Project."
-    if [ "$PWD" != "brainbaseui" ]; then
-        cd brainbaseui
-    fi
-    npm run dev
-else
-    if [ "shkrmishstore" == "$1" ] || [ "shkr" == "$1" ] || [ "ss" == "$1" ]; then
-        echo "Detected query as Shkrmishstore. Running UI Frontend."
-        if [ "$PWD" != "shkrmishstore" ]; then
-            cd shkrmishstore
-        fi
-        npm run dev
-    else
-        echo "No query detected."
-        echo "Expected [brainbase/bb/brr] [shkrmishstore/ss/shkr]"
-        echo "Trying $1"
+echo ""
+echo " ------- NEXT ROOT RUNNER ------- "
+echo "         by @gavingogaming        "
+echo " Usage: run <project> [run|deploy|launch|new]"
+echo " --------------------------------- "
+echo " Detected user query: $1"
+echo " --------------------------------- "
+
+function runordeploy {
+    if [ "$2" == "run" ] || [ "$2" == "" ]; then
+        echo " Running $1"
         if [ "$PWD" != "$1" ]; then
             cd "$1"
         fi
         npm run dev
+    else
+        if [ "$2" == "deploy" ]; then
+            echo " Deploying $1"
+            if [ "$PWD" != "$1" ]; then
+                cd "$1"
+            fi
+            fly deploy
+        else
+            if [ "$2" == "launch" ]; then
+                echo " Launching a new Fly for $1"
+                if [ "$PWD" != "$1" ]; then
+                    cd "$1"
+                fi
+                fly launch
+            else
+                if [ "$2" == "new" ]; then
+                    echo " Making a new project as $1"
+                    npx create-next-app "$1" --app --src-dir --ts --use-npm
+                else
+                    echo "Invalid run command! Either run, deploy, new, or launch work."
+                fi
+            fi
+        fi
+    fi
+}
+if [ "brainbase" == "$1" ] || [ "br" == "$1" ] || [ "bb" == "$1" ]; then
+    runordeploy brainbaseui $2
+else
+    if [ "shkrmishstore" == "$1" ] || [ "shkr" == "$1" ] || [ "ss" == "$1" ]; then
+        runordeploy shkrmishstore $2
+    else
+        if [ "klash" == "$1" ] || [ "k" == "$1" ] || [ "ks" == "$1" ]; then
+            runordeploy klashsite $2
+        else
+            if [ "empires" == "$1" ] || [ "de" == "$1" ]; then
+                runordeploy empires $2
+            else
+                if [ "cfc" == "$1" ] || [ "counterfeit" == "$1" ] || [ "counterfeitcontent" == "$1" ]; then
+                    runordeploy counterfeitcontent $2
+                else
+                    echo " No existing project found for $1"
+                    echo " Attempting a run-on-directory"
+                    runordeploy $1 $2
+                fi
+            fi
+        fi
     fi
 fi

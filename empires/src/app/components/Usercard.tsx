@@ -14,10 +14,14 @@ export default function Usercard(props: { image:string, title:string, name:strin
                     <div style={{display:'flex',justifyContent:'left',paddingBottom:'10px'}}><Typography fontFamily={'ITC'} textColor={'#FFFFFF'} fontSize={'1.1vw'}><span dangerouslySetInnerHTML={{__html:props.description}}></span></Typography></div>
                 </div>
             </div>
-            <div style={{width:'100%',paddingTop:'35px',borderTop:(props.top?'none':'1px solid white')}} className='dontDisplayOnDesktop'>
-                <div style={{display:'flex',justifyContent:'left',paddingBottom:'2px'}}><Typography fontFamily={'ITC'} textColor={props.titleColor} level='h4'>{props.name}</Typography></div>
-                <div style={{display:'flex',justifyContent:'left',paddingBottom:'10px'}}><Typography fontFamily={'ITC'} textColor={props.titleColor} level='h4'>{props.title}</Typography></div>
-                <div style={{display:'flex',justifyContent:'left',paddingBottom:'10px'}}><Typography fontFamily={'ITC'} textColor={'#FFFFFF'} level='body-sm'><span dangerouslySetInnerHTML={{__html:props.description}}></span></Typography></div>
+            <div style={{width:'100%',paddingTop:'35px',borderTop:(props.top?'none':'1px solid white'),position:'relative'}} className='dontDisplayOnDesktop'>
+                <div style={{display:'flex',justifyContent:'left',paddingBottom:'2px',maxWidth:'65%'}}><Typography fontFamily={'ITC'} textColor={props.titleColor} level='h4'>{props.name}</Typography></div>
+                <div style={{display:'flex',justifyContent:'left',paddingBottom:'10px',maxWidth:'65%'}}><Typography fontFamily={'ITC'} textColor={props.titleColor} level='h4'>{props.title}</Typography></div>
+                <div style={{display:'flex',justifyContent:'left',paddingBottom:'10px',position:'relative'}}>
+                    <img src={props.image} style={{position:'absolute',top:'-100px',right:'0px',width:'28%'}} alt="" />
+                    <Typography fontFamily={'ITC'} textColor={'#FFFFFF'} level='body-sm'><span dangerouslySetInnerHTML={{__html:props.description}}></span></Typography>
+                </div>
+                
             </div>
         </span>
     );

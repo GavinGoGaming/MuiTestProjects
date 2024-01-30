@@ -40,7 +40,8 @@ export default function Page() {
                 <Navigation active='team' />
                 <TitleZone bottom="A parody web series about the worst client ever...." bottom2="coming February 25th to YouTube" key='title' />
                 <Sheet sx={{ marginTop: '10px', width: '100%', background: 'transparent', display: 'flex', justifyContent: 'center', alignItems: 'center', height: 'fit-content', paddingBottom: '50px', color: 'black' }}>
-                    <Button size={'lg'} sx={{background:'#5ECFFA',color:'black',marginRight:'15px',borderRadius:'1.4vw',height:'2.7vh',width:'7vw',fontSize:'1.15vw'}} onClick={function(){window.location.href='/cast';}}>CAST</Button> <Button color='danger' onClick={function(){window.location.href='/crew';}} size={'lg'} variant='plain' sx={{color:'white',width:'7vw',fontSize:'1.15vw',marginLeft:'15px',borderRadius:'1.4vw',height:'2.7vh'}}>CREW</Button>
+                    <Button className="bigsizemobile" size={'lg'} sx={{background:'#5ECFFA',color:'black',marginRight:'15px',borderRadius:'1.4vw',height:'2.7vh',width:'7vw',fontSize:'1.15vw'}} onClick={function(){window.location.href='/cast';}}>CAST</Button>
+                    <Button className="bigsizemobile" color='danger' onClick={function(){window.location.href='/crew';}} size={'lg'} variant='plain' sx={{color:'white',width:'7vw',fontSize:'1.15vw',marginLeft:'15px',borderRadius:'1.4vw',height:'2.7vh'}}>CREW</Button>
                 </Sheet>
                 <Sheet sx={{ marginTop: '10px', width: '100%', background: '#181824', display: 'flex', justifyContent: 'center', alignItems: 'center', height: 'fit-content', paddingBottom: '50px', color: 'black' }}>
                     <Typography sx={{
