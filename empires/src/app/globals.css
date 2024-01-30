@@ -1,0 +1,410 @@
+@import url('https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto&display=swap');
+@import url('//cdn-images.mailchimp.com/embedcode/classic-061523.css');
+
+@font-face {
+  font-family: 'ITC';
+  src: url('/itc-regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ITC Bold';
+  src: url('/itc-bold.otf') format('opentype');
+}
+
+#logoimg {
+  transition: all 0.25s;
+}
+#logoimg:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.creditLink {
+  color: #333;
+}
+#mc_embed_signup{clear:left; font:14px Inter, Roboto, Helvetica,Arial,sans-serif; width: 600px;}
+#mc_embed_signup .helper_text {
+  display: none;
+}
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+  background: transparent;
+}
+#mc_embed_signup .button {
+  background-color: #5ecffa;
+  font-family: Roboto, Inter, Arial, Helvetica, sans-serif;
+  color: black;
+}
+#mc_embed_signup input {
+  border: 2px solid white;
+}
+#mc_embed_signup .button:hover {
+  background-color: #49b8e4;
+  color: black;
+}
+
+.creditLink:hover {
+  color: #444;
+}
+
+.hoverUnderline,
+.hoverUnderline>img {
+  transition: all 0.25s ease-in-out;
+}
+.follow > i {
+  cursor:pointer;
+  margin: 10px;
+  transition: all 0.25s ease-in-out;
+  font-size: 3vw;
+}
+.follow > i:hover {
+  color: #fafafa;
+}
+
+.hoverUnderline:hover {
+  text-decoration: underline;
+  scale: 1;
+  position: relative;
+}
+
+.hoverUnderline:hover>img {
+  scale: 1 !important;
+}
+.wbhg {
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.wbhg:hover {
+  background-color: #333;
+}
+.wbhg h3 {
+  transition: all 0.25s ease-in-out;
+}
+.wbhg:hover h3 {
+  font-size: 26px;
+}
+
+/* .hoverUnderline:hover::after {
+  content: "";
+  background-color: rgb(201, 243, 255);
+  width: 100%;
+  height: 2px;
+  top: 80%;
+  display: block;
+  position: absolute;
+} */
+
+.icp_image {
+  border-radius: 12px;
+  height: 100%;
+  position:relative;
+  transition: all 0.25s ease-in-out;
+}
+.icp_image:hover {
+  transform: scale(1.05);
+}
+.icp_image > img {
+  z-index: 1;
+  border-radius: 12px;
+  position: relative;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+.icp_image > .icp_border {
+  width: calc(100% + 6px);
+  height: calc(100% - 2px);
+  z-index: 0;
+  top: 0;
+  border-radius: 15px;
+  left: 0;
+  display: block;
+  position: absolute;
+}
+.icpright {
+  text-align: right;
+  margin-right: 30px;
+}
+.icpleft {
+  text-align: left;
+  margin-left: 30px;
+}
+.mobile-prop-inner {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.icp_image {
+  height: auto !important;
+}
+/* @media only screen and (max-width: 950px) {
+  .icp_image {
+    height: auto !important;
+  }
+} */
+
+.bolded {
+  font-family: 'ITC Bold';
+}
+#navbuttons > button {
+  display: none;
+}
+.btn > button:hover {
+  text-decoration: underline;
+}
+iframe {
+  width: 36.9vw;
+  height: 40vh;
+}
+.bottomftr {
+  font-size: 0.7vw;
+}
+.topftrtitle {
+  font-size: 2.1vw;
+}
+.crew {
+  font-size: 1.5vw;
+}
+.promoPageObject {
+  text-align: left;
+}
+@media only screen and (min-width: 601px) {
+  .dontDisplayOnDesktop {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .promoPageObject {
+    text-align: center;
+  }
+  .follow>i {
+    font-size: 8vw;
+  }
+  .mobileDo24px {
+    font-size: 24px !important;
+  }
+  img[alt="logo"] {
+    width: 60px !important;
+    height: auto !important;
+  }
+  img[src="/de_logo.png"] {
+    width: 90% !important;
+    height: auto !important;
+  }
+  .deschome:not(.crew):not(.promo) {
+    font-size:24px !important;
+    top: 120px !important;
+  }
+  .deschome.promo {
+    width: 90vw;
+  }
+  .promoPageObject > a.link {
+    float: none !important;
+    display: block;
+    width: 100%;
+  }
+  .crew.deschome {
+    width:90vw;
+    padding-left: 10px;
+  }
+  .paddingForTinyScreen {
+    padding-left:10px !important;
+    padding-right:10px !important;
+    font-size: 21px !important;
+  }
+  iframe {
+    width: 98% !important;
+    height: 200px !important;
+  }
+  #navbuttons > div.btn {
+    display: none !important;
+  }
+  #navbuttons > button {
+    display: block;
+  }
+  .bottomftr {
+    font-size: 22px !important;
+  }
+  .topftrtitle {
+    font-size: 32px !important;
+  }
+  #mc_embed_signup {
+    width: 98vw;
+  }
+
+
+
+  .loginPaneRightSide {
+    display: none;
+  }
+  .mobile-prop, .mobile-prop-inner {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .mobile-prop > div:not(.dontDisplayOnMobil), .mobile-prop-inner > div:not(.dontDisplayOnMobil) {
+    width: 100% !important;
+  }
+  /* .icp_content_box > p {
+    width: 80%;
+  } */
+  #title {
+    font-size: 30px;
+  }
+  #menunavbuttons {
+    display: inline-block !important;
+  }
+  .mobile-prop-inner {
+    display: block !important;
+  }
+  .dontDisplayOnMobil {
+    width: 80% !important;
+    margin-left: 8% !important;
+  }
+  .icp_content_box {
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 20px;
+  }
+
+  .dontDisplayOnMobile {
+    display: none !important;
+  }
+
+  .loginPaneLeftSide {
+    width: 100%;
+    height: 100vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    z-index: 2;
+    box-shadow: var(--joy-shadowRing,0 0 #000),0px 2px 8px -2px rgba(var(--joy-shadowChannel,21 21 21) / var(--joy-shadowOpacity,0.08)),0px 6px 12px -2px rgba(var(--joy-shadowChannel,21 21 21) / var(--joy-shadowOpacity,0.08));
+  }
+
+  
+}
+
+@media only screen and (min-width: 781px) {
+  
+}
+
+#tiles {
+  display: grid;
+  grid-template-columns: repeat(80, 50px);
+  grid-template-rows: repeat(10, 50px);
+}
+
+.tile {
+  border: 1px solid white;
+  height: 50px;
+  width: 50px;
+}
+a:visited, .link:visited {
+  color: lightblue;
+  text-decoration: underline;
+}
+a:hover, .link:hover {
+  color: rgb(130, 198, 220);
+  text-decoration: underline;
+}
+a:link, .link {
+  color: lightblue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+  --joy-fontFamily-body: 'ITC', 'ITC Bold', 'Inter' !important;
+
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb:	251, 252, 254;
+  --background-end-rgb: 251, 252, 254;
+
+  --primary-glow: conic-gradient(from 180deg at 50% 50%,
+      #16abff33 0deg,
+      #0885ff33 55deg,
+      #54d6ff33 120deg,
+      #0071ff33 160deg,
+      transparent 360deg);
+  --secondary-glow: radial-gradient(rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0));
+
+  --tile-start-rgb: 239, 245, 249;
+  --tile-end-rgb: 228, 232, 233;
+  --tile-border: conic-gradient(#00000080,
+      #00000040,
+      #00000030,
+      #00000020,
+      #00000010,
+      #00000010,
+      #00000080);
+
+  --callout-rgb: 238, 240, 241;
+  --callout-border-rgb: 172, 175, 176;
+  --card-rgb: 180, 185, 188;
+  --card-border-rgb: 131, 134, 135;
+}
+
+  html[data-joy-color-scheme = "dark"] {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb:	11, 13, 14;
+    --background-end-rgb:	11, 13, 14;
+
+    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+    --secondary-glow: linear-gradient(to bottom right,
+        rgba(1, 65, 255, 0),
+        rgba(1, 65, 255, 0),
+        rgba(1, 65, 255, 0.3));
+
+    --tile-start-rgb: 2, 13, 46;
+    --tile-end-rgb: 2, 5, 19;
+    --tile-border: conic-gradient(#ffffff80,
+        #ffffff40,
+        #ffffff30,
+        #ffffff20,
+        #ffffff10,
+        #ffffff10,
+        #ffffff80);
+
+    --callout-rgb: 20, 20, 20;
+    --callout-border-rgb: 108, 108, 108;
+    --card-rgb: 100, 100, 100;
+    --card-border-rgb: 200, 200, 200;
+  }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.css-1os0jw6, .css-2vm0p0-JoySheet-root, .css-1eixtkx-JoyButton-root, .css-10wjypa-JoyButton-root {
+  font-family: 'ITC', 'ITC Bold' !important;
+}
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-image: url('/BG2.jpg');
+  background-size: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
