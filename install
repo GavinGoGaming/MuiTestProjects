@@ -1,0 +1,39 @@
+#!/bin/bash
+echo ""
+echo " ------- PROJECT INSTALLING ------- "
+echo "         by @gavingogaming        "
+echo " Usage: install <project> [fluent|material|joy]"
+echo " --------------------------------- "
+echo " Detected user query: $1"
+echo " --------------------------------- "
+
+if [ -d $1 ]; then
+    if [ $2 == "fluent" ]; then
+        echo " Installing Fluent UI for $1"
+        if [ "$PWD" != "$1" ]; then
+            cd "$1"
+        fi
+        npm install @fluentui/react
+    else
+        if [ $2 == "material" ]; then
+            echo " Installing Material UI for $1"
+            if [ "$PWD" != "$1" ]; then
+                cd "$1"
+            fi
+            npm install @mui/material @emotion/react @emotion/styled
+        else
+            if [ $2 == "joy" ]; then
+                echo " Installing Joy UI for $1"
+                if [ "$PWD" != "$1" ]; then
+                    cd "$1"
+                fi
+                npm install @mui/joy @emotion/react @emotion/styled
+            else
+                npm i @fluentui/react-components
+                npm install @mui/joy @emotion/react @emotion/styled
+            fi
+        fi
+    fi
+else
+    echo "No project found"
+fi
