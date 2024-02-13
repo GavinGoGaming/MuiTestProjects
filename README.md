@@ -10,6 +10,9 @@ Usage is `run <project> [type]`. Project can be:
 - shkrmishstore (shkr, ss)
 - brainbaseui (bb, br)
 - empires (de)
+- counterfeitcontent
+- notify
+- fluent-test
 
 while type can be:
 - run (or no 2nd arg)

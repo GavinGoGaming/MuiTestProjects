@@ -13,7 +13,7 @@ if [ -d $1 ]; then
         if [ "$PWD" != "$1" ]; then
             cd "$1"
         fi
-        npm install @fluentui/react
+        npm install @fluentui/react-components
     else
         if [ $2 == "material" ]; then
             echo " Installing Material UI for $1"
