@@ -1,0 +1,122 @@
+[
+    {
+        "name": "PolyTrack",
+        "image": "https://i.ibb.co/zsS3zQg/polyimage.png",
+        "description": "PolyTrack is a low-poly racing game with loops, jumps and high speeds, where every millisecond counts.",
+        "url": "https://www.kodub.com/apps/polytrack",
+        "category": "Competitive,Racing Games,Games",
+        "unblock": true
+    },
+    {
+        "name": "Tetr.io",
+        "image": "https://avatars.githubusercontent.com/u/66926598?s=200&v=4",
+        "description": "Puzzle together in this modern yet familiar online stacker. play against friends and foes all over the world, or claim a spot on the leaderboards - the stacker future is yours!",
+        "url": "https://tetr.io/",
+        "category": "Competitive,Puzzle Games,Retro,Games",
+        "unblock": true
+    },
+    {
+        "name": "Mari0",
+        "image": "https://upload.wikimedia.org/wikipedia/en/1/1f/Mari0_video_game_logo.png",
+        "description": "Mari0 is a 2012 side-scrolling platform video game developed by German indie developer Maurice Guégan with creative input from Sašo Smolej and released onto their website Stabyourself.net. It combines gameplay elements from Nintendo's Super Mario series and Valve's Portal series.",
+        "url": "https://tannerrogalsky.com/mari0/",
+        "category": "Puzzle Games,Mario,Retro,Games",
+        "unblock": true
+    },
+    {
+        "name": "Discord",
+        "image": "https://static.vecteezy.com/system/resources/previews/006/892/625/large_2x/discord-logo-icon-editorial-free-vector.jpg",
+        "description": "Discord is an instant messaging and VoIP social platform which allows communication through voice calls, video calls, text messaging, and media and files. Communication can be private or take place in virtual communities called servers.",
+        "url": "https://discord.com/channels/@me",
+        "category": "Social Media,Apps",
+        "unblock": true
+    },
+    {
+        "name": "TeamViewer",
+        "image": "https://yt3.googleusercontent.com/h109MecJs_Iez16imGDVtSpwk1vqy5EcjQD06tdOa8x5CwvsVWI992RnIlmsi9UGMz26ZUZSCg=s900-c-k-c0x00ffffff-no-rj",
+        "description": "TeamViewer is a mutli-functional remote desktop and remote access software that allows you to control and access other devices from anywhere in the world, allowing you to connect to your home computers from within Glacier.",
+        "url": "https://web.teamviewer.com",
+        "category": "Remote Desktop,Apps",
+        "unblock": true
+    },
+    {
+        "name": "Instagram",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/300px-Instagram_logo_2022.svg.png",
+        "description": "Instagram is an American photo and video sharing social networking service owned by Meta Platforms. It allows users to upload media that can be edited with filters, be organized by hashtags, and be associated with a location via geographical tagging. Posts can be shared publicly or with preapproved followers.",
+        "url": "https://www.instagram.com/",
+        "category": "Social Media,Apps",
+        "unblock": true
+    },
+    {
+        "name": "Twitter",
+        "image": "https://play-lh.googleusercontent.com/A-Rnrh0J7iKmABskTonqFAANRLGTGUg_nuE4PEMYwJavL3nPt5uWsU2WO_DSgV_mOOM=w480-h960-rw",
+        "description": "Twitter, Inc. was an American social media company based in San Francisco, California. The company operated the social networking service Twitter and previously the Vine short video app and Periscope livestreaming service.",
+        "url": "https://twitter.com/?lang=en",
+        "category": "Social Media,Apps",
+        "unblock": true
+    },
+    {
+        "name": "YouTube",
+        "image": "https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc=s96-rw",
+        "description": "YouTube is an American online video sharing and social media platform owned by Google. Accessible worldwide, it was launched on February 14, 2005, by Steve Chen, Chad Hurley, and Jawed Karim, three former employees of PayPal.",
+        "url": "https://www.youtube.com/",
+        "category": "Social Media,Video Player,Apps",
+        "unblock": true
+    },
+    {
+        "name": "Spotify",
+        "image": "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc=w480-h960-rw",
+        "description": "Spotify is a digital music service that gives you access to millions of songs.",
+        "url": "https://open.spotify.com/?",
+        "category": "Social Media,Music,Apps",
+        "unblock": true
+    },
+    {
+        "name": "Sandboxels",
+        "image": "https://a.silvergames.com/j/b/the-sandbox.jpg",
+        "description": "Sandboxels is a free falling-sand simulator that can be played in your browser. It features heat simulation, electricity, density, chemical reactions, cooking, and fire spread. With over 500 unique elements to play with, Sandboxels is a great way to pass the time and relax.",
+        "url": "https://sandboxels.r74n.com/",
+        "category": "Games",
+        "unblock": true
+    },
+    {
+        "name": "Netflix",
+        "image": "https://play-lh.googleusercontent.com/TBRwjS_qfJCSj1m7zZB93FnpJM5fSpMA_wUlFDLxWAb45T9RmwBvQd5cWR5viJJOhkI=w480-h960-rw",
+        "description": "Netflix is an American subscription video on-demand over-the-top streaming service. The service primarily distributes original and acquired films and television shows from various genres, and it is available internationally in multiple languages.",
+        "url": "https://www.netflix.com/",
+        "category": "Video Player,Apps",
+        "unblock": true
+    },
+    {
+        "name": "WebRetro",
+        "image": "https://web.libretro.com/media/canvas.png",
+        "description": "Play many retro games on WebRetro, including Mario, Sonic, and more!",
+        "url": "https://binbashbanana.github.io/webretro/",
+        "category": "Retro,Games",
+        "unblock": true
+    },
+    {
+        "name": "1.8 Ultimate",
+        "image": "https://m.media-amazon.com/images/I/51L0-hXjy+L.png",
+        "description": "Play Minecraft 1.8 singleplayer, now including RTX Shaders.",
+        "url": "https://www.autistici.org/eaglercraft/play/EaglercraftX_1.8/",
+        "category": "Games,Minecraft",
+        "unblock": true
+    },
+    {
+        "name": "v86",
+        "image": "/windows/polyimage.png",
+        "description": "Access old versions of Windows through Glacier like 3.1, 1.01, 95, 98, and even 2000!",
+        "url": "https://copy.sh/v86/",
+        "category": "Retro,Apps",
+        "unblock": true
+    },
+    {
+        "name": "TikTok",
+        "image": "https://cdn.shopify.com/app-store/listing_images/ca1f1238d808935b77771b399df6e9ab/icon/CLe6nrP0lu8CEAE=.png",
+        "description": "TikTok, whose mainland Chinese counterpart is Douyin, is a short-form video hosting service owned by ByteDance. It hosts user-submitted videos, which can range in duration from 3 seconds to 10 minutes. Since their launches, TikTok and Douyin have gained global popularity.",
+        "url": "https://www.tiktok.com/en/",
+        "category": "Social Media,Apps",
+        "unblock": true
+    }
+]

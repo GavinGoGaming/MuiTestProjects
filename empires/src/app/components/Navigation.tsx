@@ -50,9 +50,12 @@ export default function Navigation(props: {active:string}) {
               <div style={{display:'inline-flex',marginRight:'1vw'}} className='btn'>
                 <Button onClick={function(){window.location.href='/cast';}} variant='plain' sx={{float:'right',fontSize:'1.3vw',width:'10vw',color:(props.active=='team'?'#5ECFFA':'inherit')}} size='lg' color='neutral'>TEAM</Button>
               </div>
-              {/* <div style={{display:'inline-flex',marginRight:'1vw'}} className='btn'>
-                <Button onClick={function(){window.location.href='#';}} variant='plain' sx={{float:'right',fontSize:'1.3vw',width:'10vw'}} size='lg' color='neutral'>PATREON</Button>
-              </div> */}
+              <div style={{display:'inline-flex',marginRight:'1vw'}} className='btn'>
+                <Button onClick={function(){window.location.href='/contest';}} variant='plain' sx={{float:'right',fontSize:'1.3vw',width:'10vw',color:(props.active=='contest'?'#5ECFFA':'inherit')}} size='lg' color='neutral'>CONTEST</Button>
+              </div>
+              <div style={{display:'inline-flex',marginRight:'1vw'}} className='btn'>
+                <Button onClick={function(){window.open('https://www.patreon.com/designingempires')}} variant='plain' sx={{float:'right',fontSize:'1.3vw',width:'10vw'}} size='lg' color='neutral'>PATREON</Button>
+              </div>
               <MobileNav/>
             </span>
         </Sheet>

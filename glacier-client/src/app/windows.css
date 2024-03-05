@@ -205,7 +205,6 @@
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
-
 .hidden {
   display: none !important;
 }
@@ -287,6 +286,7 @@
 }
 .w11-content {
   /* margin-top: 40px; */
+  height: calc(100% - 40px);
   overflow:scroll;
 }
 
@@ -308,7 +308,7 @@ textarea.mono {
   padding: 20px;
 }
 .window-full {
-  min-height: 100%;
+  height: 100% !important;
 }
 
 html, body {

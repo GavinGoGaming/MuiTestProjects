@@ -11,20 +11,24 @@
     <link rel="preload" as="image" href="/windows/icons/edge.png" />
     <link rel="preload" as="image" href="/windows/icons/calculator.png" />
     <link rel="preload" as="image" href="/windows/icons/camera.png" />
-    <link rel="preload" as="image" href="/windows/TeamViewer.ico" />
+    <link rel="preload" as="image" href="/windows/store.png" />
     <link rel="preload" as="image" href="/windows/icons/minimize.png" />
     <link rel="preload" as="image" href="/windows/icons/maximize.png" />
-    <link rel="stylesheet" href="/_next/static/css/5a39335cf520a80d.css" crossorigin="" data-precedence="next" />
-    <link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-defe0a3e16b1cf09.js"
+    <link rel="stylesheet" href="/_next/static/css/4a89ede6a41370f1.css" crossorigin="" data-precedence="next" />
+    <link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-07623cb45b8a45d5.js"
         crossorigin="" />
     <script src="/_next/static/chunks/fd9d1056-685fb10a834e69bd.js" async="" crossorigin=""></script>
     <script src="/_next/static/chunks/69-ebd015bbf4c74b77.js" async="" crossorigin=""></script>
     <script src="/_next/static/chunks/main-app-2fa802da291a069e.js" async="" crossorigin=""></script>
-    <script src="/_next/static/chunks/3db6e918-b3f778051d90aeb2.js" async=""></script>
-    <script src="/_next/static/chunks/c36591c5-94fe281897fade8a.js" async=""></script>
-    <script src="/_next/static/chunks/29d61979-4b2000af5bf509fd.js" async=""></script>
-    <script src="/_next/static/chunks/922-54e1fe0ad1636190.js" async=""></script>
-    <script src="/_next/static/chunks/app/page-0becb85b64253b71.js" async=""></script>
+    <script src="/_next/static/chunks/3db6e918-4b0dd7748739c590.js" async=""></script>
+    <script src="/_next/static/chunks/3939862f-bdda5fb46fe2cd86.js" async=""></script>
+    <script src="/_next/static/chunks/b932ffb6-04e3636840ae50c3.js" async=""></script>
+    <script src="/_next/static/chunks/5c4a068a-63187b8844c0dae0.js" async=""></script>
+    <script src="/_next/static/chunks/0e9f9a68-2d55c1ee7db51797.js" async=""></script>
+    <script src="/_next/static/chunks/c36591c5-60de67aec74d6296.js" async=""></script>
+    <script src="/_next/static/chunks/29d61979-fc7d073f18cc1a52.js" async=""></script>
+    <script src="/_next/static/chunks/53-ef85773aa5398d48.js" async=""></script>
+    <script src="/_next/static/chunks/app/page-b56825b2e476a8d3.js" async=""></script>
     <link rel="preload" as="image" href="/windows/icons/close.png" />
     <link rel="preload" as="image" href="/windows/icons/System.webp" />
     <link rel="preload" as="image" href="/windows/icons/Bluetooth &amp; devices.webp" />
@@ -492,8 +496,8 @@
                         alt="Calculator" /><span>Calculator</span></div>
                 <div id="camera-tb-app" class="w11-taskbar-app"><img src="/windows/icons/camera.png"
                         alt="Camera" /><span>Camera</span></div>
-                <div id="teamviewer-tb-app" class="w11-taskbar-app"><img src="/windows/TeamViewer.ico"
-                        alt="TeamViewer" /><span>TeamViewer</span></div>
+                <div id="store-tb-app" class="w11-taskbar-app"><img src="/windows/store.png"
+                        alt="Microsoft Store" /><span>Microsoft Store</span></div>
             </div>
             <div style="position:absolute;user-select:auto;width:800px;height:500px;display:inline-block;top:0;left:0;cursor:auto;transform:translate(40px,40px);max-width:9007199254740991px;max-height:9007199254740991px;box-sizing:border-box;flex-shrink:0"
                 class="w11-window gray settings react-draggable">
@@ -515,15 +519,15 @@
                                     class="fui-Input r1jtohuq ___1v9icnz fvcxoqz f1ub3y4t f1l4zc64 f1m52nbi f8vnjqi fz1etlk f1klwx88 f1hc16gm"><input
                                         type="text" placeholder="Search settings..." class="fui-Input__input rvp2gzh"
                                         value="" /></span>
-                                <div class="settings-section"><img src="/windows/icons/System.webp" alt="" />
+                                <div class="settings-section disabled"><img src="/windows/icons/System.webp" alt="" />
                                     <p>System</p>
                                 </div>
-                                <div class="settings-section"><img src="/windows/icons/Bluetooth &amp; devices.webp"
-                                        alt="" />
+                                <div class="settings-section disabled"><img
+                                        src="/windows/icons/Bluetooth &amp; devices.webp" alt="" />
                                     <p>Bluetooth &amp; Devices</p>
                                 </div>
-                                <div class="settings-section"><img src="/windows/icons/Network &amp; internet.webp"
-                                        alt="" />
+                                <div class="settings-section disabled"><img
+                                        src="/windows/icons/Network &amp; internet.webp" alt="" />
                                     <p>Network &amp; Internet</p>
                                 </div>
                                 <div class="settings-section active"><img src="/windows/icons/Personalisation.webp"
@@ -536,18 +540,19 @@
                                 <div class="settings-section"><img src="/windows/icons/Accounts.webp" alt="" />
                                     <p>Accounts</p>
                                 </div>
-                                <div class="settings-section"><img src="/windows/icons/Time &amp; language.webp"
-                                        alt="" />
+                                <div class="settings-section disabled"><img
+                                        src="/windows/icons/Time &amp; language.webp" alt="" />
                                     <p>Time &amp; Language</p>
                                 </div>
-                                <div class="settings-section"><img src="/windows/icons/Gaming.webp" alt="" />
+                                <div class="settings-section disabled"><img src="/windows/icons/Gaming.webp" alt="" />
                                     <p>Gaming</p>
                                 </div>
-                                <div class="settings-section"><img src="/windows/icons/Accessibility.webp" alt="" />
+                                <div class="settings-section disabled"><img src="/windows/icons/Accessibility.webp"
+                                        alt="" />
                                     <p>Accessibility</p>
                                 </div>
-                                <div class="settings-section"><img src="/windows/icons/Privacy &amp; security.webp"
-                                        alt="" />
+                                <div class="settings-section disabled"><img
+                                        src="/windows/icons/Privacy &amp; security.webp" alt="" />
                                     <p>Privacy &amp; Security</p>
                                 </div>
                             </div>
@@ -692,7 +697,7 @@
                 </div>
                 <div class="w11-content" style="border-top:1px solid #ffffff0a"><textarea class="window-padding mono"
                         style="color:white;height:100%"
-                        rows="25">Microsoft Windows [Version 10.0.22621.3007] (c) Microsoft Corporation. All rights reserved. C:\Users\user&gt;</textarea>
+                        rows="25">Microsoft Windows [Version 10.0.22621.3007]\n(c) Microsoft Corporation. All rights reserved.\n\nC:\Users\user&gt;&gt;</textarea>
                 </div>
                 <div>
                     <div class=""
@@ -721,10 +726,10 @@
                     </div>
                 </div>
             </div>
-            <div style="position:absolute;user-select:auto;width:800px;height:460px;display:inline-block;top:0;left:0;cursor:auto;transform:translate(0px,0px);max-width:9007199254740991px;max-height:9007199254740991px;box-sizing:border-box;flex-shrink:0"
-                class="w11-window glass teamviewer react-draggable">
+            <div style="position:absolute;user-select:auto;width:800px;height:500px;display:inline-block;top:0;left:0;cursor:auto;transform:translate(40px,40px);max-width:9007199254740991px;max-height:9007199254740991px;box-sizing:border-box;flex-shrink:0"
+                class="w11-window gray edge react-draggable">
                 <div class="w11-top">
-                    <div class="w11-title">TeamViewer Desktop</div>
+                    <div class="w11-title">Microsoft Edge</div>
                     <div class="w11-controls">
                         <div class="w11-minimize left"><img src="/windows/icons/minimize.png" alt=""
                                 style="width:18px;margin-top:1px;filter:brightness(0) invert(1)" /></div>
@@ -735,8 +740,183 @@
                     </div>
                 </div>
                 <div class="w11-content" style="border-top:1px solid #ffffff0a">
-                    <div class="window-full"><iframe src="/uv/service/hvtrs8%2F-wgb%2Ctgaovkeuep.aoo%2F"
-                            style="border:0px;position:absolute;width:100%;height:calc(100% - 40px)"></iframe></div>
+                    <form id="uv-form" class="flex-center" style="margin:8px"><input id="uv-search-engine" type="hidden"
+                            value="https://www.google.com/search?q=%s" /><span style="width:calc(80% - 5px)"
+                            class="fui-Input r1jtohuq ___1v9icnz fvcxoqz f1ub3y4t f1l4zc64 f1m52nbi f8vnjqi fz1etlk f1klwx88 f1hc16gm"><input
+                                type="text" id="uv-address" placeholder="Search the top of the iceberg"
+                                class="fui-Input__input rvp2gzh" value="" /></span><button type="submit"
+                            style="width:20%;margin-left:5px;margin-bottom:3px" class="fui-Button r1alrhcs">Search<span
+                                class="fui-Button__icon rywnvv2 ___1yz413i f1a695kz"><svg fill="currentColor"
+                                    class="___12fm75w f1w7gpdv fez10in fg4l7m0" aria-hidden="true" width="1em"
+                                    height="1em" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.5 3a5.5 5.5 0 0 1 4.23 9.02l4.12 4.13a.5.5 0 0 1-.63.76l-.07-.06-4.13-4.12A5.5 5.5 0 1 1 8.5 3Zm0 1a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z"
+                                        fill="currentColor"></path>
+                                </svg></span></button></form><iframe id="uv-iframe" src="" class="hidden"
+                        style="width:100%;height:88%;position:absolute;border:none" frameBorder="0"></iframe>
+                    <div class="desc">
+                        <p id="uv-error"></p>
+                        <pre id="uv-error-code"></pre>
+                    </div>
+                </div>
+                <div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:100%;height:10px;top:-5px;left:0px;cursor:row-resize">
+                    </div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:10px;height:100%;top:0px;right:-5px;cursor:col-resize">
+                    </div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:100%;height:10px;bottom:-5px;left:0px;cursor:row-resize">
+                    </div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:10px;height:100%;top:0px;left:-5px;cursor:col-resize">
+                    </div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:20px;height:20px;right:-10px;top:-10px;cursor:ne-resize">
+                    </div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:20px;height:20px;right:-10px;bottom:-10px;cursor:se-resize">
+                    </div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:20px;height:20px;left:-10px;bottom:-10px;cursor:sw-resize">
+                    </div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:20px;height:20px;left:-10px;top:-10px;cursor:nw-resize">
+                    </div>
+                </div>
+            </div>
+            <div style="position:absolute;user-select:auto;width:545px;height:450px;display:inline-block;top:0;left:0;cursor:auto;transform:translate(40px,40px);max-width:9007199254740991px;max-height:9007199254740991px;box-sizing:border-box;flex-shrink:0"
+                class="w11-window gray camera react-draggable">
+                <div class="w11-top">
+                    <div class="w11-title">Camera</div>
+                    <div class="w11-controls">
+                        <div class="w11-minimize left"><img src="/windows/icons/minimize.png" alt=""
+                                style="width:18px;margin-top:1px;filter:brightness(0) invert(1)" /></div>
+                        <div class="w11-fullscreen mid"><img src="/windows/icons/maximize.png" alt=""
+                                style="width:18px;margin-top:1px;filter:brightness(0) invert(1)" /></div>
+                        <div class="w11-close end"><img src="/windows/icons/close.png" alt=""
+                                style="width:18px;margin-top:1px;filter:brightness(0) invert(1)" /></div>
+                    </div>
+                </div>
+                <div class="w11-content" style="border-top:1px solid #ffffff0a">
+                    <div class="camera-app-container hidden"><video id="camera-player" autoPlay=""
+                            style="width:100%;height:100%"></video><canvas id="camera-canvas" class="hidden"
+                            style="position:absolute;width:100%;height:100%"></canvas>
+                        <div
+                            style="position:absolute;bottom:10px;width:100%;display:flex;justify-content:center;align-items:center">
+                            <button type="button" id="camera-take-photo" class="fui-Button r1alrhcs"><span
+                                    class="fui-Button__icon rywnvv2 ___963sj20 f1nizpg2"><svg fill="currentColor"
+                                        class="___12fm75w f1w7gpdv fez10in fg4l7m0" aria-hidden="true" width="1em"
+                                        height="1em" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7 10a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-.22-7.17c.26-.51.78-.83 1.34-.83h3.77c.57 0 1.09.32 1.34.83L13.81 4h1.7A2.5 2.5 0 0 1 18 6.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 2 14.5v-8A2.5 2.5 0 0 1 4.5 4h1.68l.6-1.17ZM10 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"
+                                            fill="currentColor"></path>
+                                    </svg></span>Take Photo</button>
+                            <div style="width:1px;background:#ccc;height:22px;margin:0px 10px"></div><span
+                                class="fui-Checkbox r10zo65y ___13877ya f19n0e5 f35ds98 f12mnkne fei9a8h fix56y3 f1bcv2js f7dr4go f1r5cpua"><input
+                                    type="checkbox" id="camera-timer"
+                                    class="fui-Checkbox__input ruo9svu ___qlal8r0 f1vgc2s3" checked="" />
+                                <div aria-hidden="true" class="fui-Checkbox__indicator rl7ci6d"><svg fill="currentColor"
+                                        class="___12fm75w f1w7gpdv fez10in fg4l7m0" aria-hidden="true" width="12"
+                                        height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.76 3.2c.3.29.32.76.04 1.06l-4.25 4.5a.75.75 0 0 1-1.08.02L2.22 6.53a.75.75 0 0 1 1.06-1.06l1.7 1.7L8.7 3.24a.75.75 0 0 1 1.06-.04Z"
+                                            fill="currentColor"></path>
+                                    </svg></div><label for="camera-timer"
+                                    class="fui-Label fui-Checkbox__label ___noxlvg0 fk6fouc f1ym3bx4 fkhj508 f1i3iumi f7nlbp4 fpo1scq f1kwiid1 f1vdfbxk f5b47ha fruq291 fjzwpt6 fh6j2fo">Timer</label>
+                            </span>
+                        </div>
+                        <div id="timer-cooldown" class="hidden"
+                            style="width:100%;height:100%;position:absolute;top:0;left:0;display:flex;align-items:center;justify-content:center">
+                            <div style="font-size:2rem;font-weight:800;padding:20px;border:3px solid white;border-radius:50%"
+                                id="timer-cooldown-text">3</div>
+                        </div>
+                    </div>
+                    <div class="open-camera-container" style="text-align:center;height:100%;margin-top:20%">
+                        <div style="width:100%"><button type="button" id="open-camera-app"
+                                class="fui-Button r1alrhcs">Start Camera</button></div>
+                        <div style="width:100%"><b>This will request permission to use your camera.</b></div>
+                        <div style="width:100%"><b>To turn off camera use, refresh the page or click &quot;Stop
+                                Camera&quot;.</b></div>
+                    </div>
+                </div>
+                <div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:100%;height:10px;top:-5px;left:0px;cursor:row-resize">
+                    </div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:10px;height:100%;top:0px;right:-5px;cursor:col-resize">
+                    </div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:100%;height:10px;bottom:-5px;left:0px;cursor:row-resize">
+                    </div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:10px;height:100%;top:0px;left:-5px;cursor:col-resize">
+                    </div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:20px;height:20px;right:-10px;top:-10px;cursor:ne-resize">
+                    </div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:20px;height:20px;right:-10px;bottom:-10px;cursor:se-resize">
+                    </div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:20px;height:20px;left:-10px;bottom:-10px;cursor:sw-resize">
+                    </div>
+                    <div class=""
+                        style="position:absolute;user-select:none;width:20px;height:20px;left:-10px;top:-10px;cursor:nw-resize">
+                    </div>
+                </div>
+            </div>
+            <div style="position:absolute;user-select:auto;width:780px;height:430px;display:inline-block;top:0;left:0;cursor:auto;transform:translate(0px,0px);max-width:9007199254740991px;max-height:9007199254740991px;box-sizing:border-box;flex-shrink:0"
+                class="w11-window gray store react-draggable">
+                <div class="w11-top">
+                    <div class="w11-title">Microsoft Store</div>
+                    <div class="w11-controls">
+                        <div class="w11-minimize left"><img src="/windows/icons/minimize.png" alt=""
+                                style="width:18px;margin-top:1px;filter:brightness(0) invert(1)" /></div>
+                        <div class="w11-fullscreen mid"><img src="/windows/icons/maximize.png" alt=""
+                                style="width:18px;margin-top:1px;filter:brightness(0) invert(1)" /></div>
+                        <div class="w11-close end"><img src="/windows/icons/close.png" alt=""
+                                style="width:18px;margin-top:1px;filter:brightness(0) invert(1)" /></div>
+                    </div>
+                </div>
+                <div class="w11-content" style="border-top:none">
+                    <div class="window-full">
+                        <div class="store-left">
+                            <div class="store-nav-icon sni-home active"><svg font-size="22px" fill="currentColor"
+                                    class="___12fm75w f1w7gpdv fez10in fg4l7m0" aria-hidden="true" width="1em"
+                                    height="1em" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 2.39a1.5 1.5 0 0 0-2 0L3.5 7.33c-.32.28-.5.69-.5 1.12v7.05c0 .83.67 1.5 1.5 1.5h2c.83 0 1.5-.67 1.5-1.5v-4c0-.28.22-.5.5-.5h3c.28 0 .5.22.5.5v4c0 .83.67 1.5 1.5 1.5h2c.83 0 1.5-.67 1.5-1.5V8.45c0-.43-.18-.84-.5-1.12L11 2.39Z"
+                                        fill="currentColor"></path>
+                                </svg></div>
+                            <div class="store-nav-icon sni-movies "><svg font-size="22px" fill="currentColor"
+                                    class="___12fm75w f1w7gpdv fez10in fg4l7m0" aria-hidden="true" width="1em"
+                                    height="1em" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2 7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7Zm13-.5v1a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0Zm.5 5.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-.5-.5ZM15 9.5v1a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0ZM4.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-.5-.5ZM4 12.5v1a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0ZM4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-.5-.5Z"
+                                        fill="currentColor"></path>
+                                </svg></div>
+                            <div class="store-nav-icon sni-apps "><svg font-size="22px" fill="currentColor"
+                                    class="___12fm75w f1w7gpdv fez10in fg4l7m0" aria-hidden="true" width="1em"
+                                    height="1em" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.5 11c.83 0 1.5.67 1.5 1.5v4c0 .83-.67 1.5-1.5 1.5h-4A1.5 1.5 0 0 1 2 16.5v-4c0-.83.67-1.5 1.5-1.5h4Zm9 0c.83 0 1.5.67 1.5 1.5v4c0 .83-.67 1.5-1.5 1.5h-4a1.5 1.5 0 0 1-1.5-1.5v-4c0-.83.67-1.5 1.5-1.5h4Zm-9-9C8.33 2 9 2.67 9 3.5v4C9 8.33 8.33 9 7.5 9h-4A1.5 1.5 0 0 1 2 7.5v-4C2 2.67 2.67 2 3.5 2h4Zm9 0c.83 0 1.5.67 1.5 1.5v4c0 .83-.67 1.5-1.5 1.5h-4A1.5 1.5 0 0 1 11 7.5v-4c0-.83.67-1.5 1.5-1.5h4Z"
+                                        fill="currentColor"></path>
+                                </svg></div>
+                            <div class="store-nav-icon sni-games "><svg font-size="22px" fill="currentColor"
+                                    class="___12fm75w f1w7gpdv fez10in fg4l7m0" aria-hidden="true" width="1em"
+                                    height="1em" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.33 4.71a2.12 2.12 0 0 0-1.35-.17l-.9.17c-.7.14-1.32.6-1.66 1.25-1.1 2.16-1.94 3.93-2.27 5.43a4.51 4.51 0 0 0 .82 4.06c.66.82 1.8.65 2.4-.02L6.9 13.7A2 2 0 0 1 8.4 13h3.2a2 2 0 0 1 1.51.7l1.51 1.73c.6.67 1.75.84 2.4.02a4.51 4.51 0 0 0 .82-4.06c-.32-1.5-1.16-3.27-2.27-5.43a2.37 2.37 0 0 0-1.66-1.25l-.9-.17a2.12 2.12 0 0 0-1.35.17l-.06.03c-.32.17-.67.26-1.01.26H9.4c-.35 0-.7-.1-1.02-.26l-.06-.03ZM10 8.5A.75.75 0 1 1 10 7a.75.75 0 0 1 0 1.5Z"
+                                        fill="currentColor"></path>
+                                </svg></div>
+                        </div>
+                        <div class="store-right">
+                            <h1>Home</h1>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class=""
@@ -767,15 +947,16 @@
             </div>
         </main>
     </div>
-    <script src="/_next/static/chunks/webpack-defe0a3e16b1cf09.js" crossorigin="" async=""></script>
+    <script src="/_next/static/chunks/webpack-07623cb45b8a45d5.js" crossorigin="" async=""></script>
     <script>(self.__next_f = self.__next_f || []).push([0]); self.__next_f.push([2, null])</script>
     <script>self.__next_f.push([1, "0:\"$L1\"\n"])</script>
-    <script>self.__next_f.push([1, "2:HL[\"/_next/static/css/5a39335cf520a80d.css\",\"style\",{\"crossOrigin\":\"\"}]\n"])</script>
-    <script>self.__next_f.push([1, "3:I[7690,[],\"\"]\n5:I[7831,[],\"\"]\n6:I[3912,[\"881\",\"static/chunks/3db6e918-b3f778051d90aeb2.js\",\"703\",\"static/chunks/c36591c5-94fe281897fade8a.js\",\"462\",\"static/chunks/29d61979-4b2000af5bf509fd.js\",\"922\",\"static/chunks/922-54e1fe0ad1636190.js\",\"931\",\"static/chunks/app/page-0becb85b64253b71.js\"],\"\"]\n7:I[5613,[],\"\"]\n8:I[1778,[],\"\"]\na:I[8955,[],\"\"]\nb:[]\n"])</script>
-    <script>self.__next_f.push([1, "1:[null,[\"$\",\"$L3\",null,{\"buildId\":\"r0D9cCPNMklwK5lI8Xw5_\",\"assetPrefix\":\"\",\"initialCanonicalUrl\":\"/\",\"initialTree\":[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"__PAGE__\",{},[\"$L4\",[\"$\",\"$L5\",null,{\"propsForComponent\":{\"params\":{}},\"Component\":\"$6\",\"isStaticGeneration\":true}],null]]},[null,[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[\"$\",\"link\",null,{\"rel\":\"shortcut icon\",\"href\":\"/windows/glacier.jpg\"}]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[],\"styles\":[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/5a39335cf520a80d.css\",\"precedence\":\"next\",\"crossOrigin\":\"\"}]]}]}]]}],null]],\"initialHead\":[false,\"$L9\"],\"globalErrorComponent\":\"$a\",\"missingSlots\":\"$Wb\"}]]\n"])</script>
+    <script>self.__next_f.push([1, "2:HL[\"/_next/static/css/4a89ede6a41370f1.css\",\"style\",{\"crossOrigin\":\"\"}]\n"])</script>
+    <script>self.__next_f.push([1, "3:I[7690,[],\"\"]\n5:I[7831,[],\"\"]\n6:I[1599,[\"881\",\"static/chunks/3db6e918-4b0dd7748739c590.js\",\"506\",\"static/chunks/3939862f-bdda5fb46fe2cd86.js\",\"694\",\"static/chunks/b932ffb6-04e3636840ae50c3.js\",\"555\",\"static/chunks/5c4a068a-63187b8844c0dae0.js\",\"89\",\"static/chunks/0e9f9a68-2d55c1ee7db51797.js\",\"703\",\"static/chunks/c36591c5-60de67aec74d6296.js\",\"462\",\"static/chunks/29d61979-fc7d073f18cc1a52.js\",\"53\",\"static/chunks/53-ef85773aa5398d48.js\",\"931\",\"static/chunks/app/page-b56825b2e476a8d3.js\"],\"\"]\n7:I[5613,[],\"\""])</script>
+    <script>self.__next_f.push([1, "]\n8:I[1778,[],\"\"]\na:I[8955,[],\"\"]\nb:[]\n"])</script>
+    <script>self.__next_f.push([1, "1:[null,[\"$\",\"$L3\",null,{\"buildId\":\"qhpuwSFsE50wQHhJrPRDk\",\"assetPrefix\":\"\",\"initialCanonicalUrl\":\"/\",\"initialTree\":[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"__PAGE__\",{},[\"$L4\",[\"$\",\"$L5\",null,{\"propsForComponent\":{\"params\":{}},\"Component\":\"$6\",\"isStaticGeneration\":true}],null]]},[null,[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[\"$\",\"link\",null,{\"rel\":\"shortcut icon\",\"href\":\"/windows/glacier.jpg\"}]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[],\"styles\":[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/4a89ede6a41370f1.css\",\"precedence\":\"next\",\"crossOrigin\":\"\"}]]}]}]]}],null]],\"initialHead\":[false,\"$L9\"],\"globalErrorComponent\":\"$a\",\"missingSlots\":\"$Wb\"}]]\n"])</script>
     <script>self.__next_f.push([1, "9:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"glacier desktop\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"glacier\"}]]\n4:null\n"])</script>
     <script>self.__next_f.push([1, ""])</script>
-
+    
     <script src="/uv/uv.bundle.js" defer></script>
     <script src="/uv/uv.config.js" defer></script>
     <script src="/register-sw.js" defer></script>

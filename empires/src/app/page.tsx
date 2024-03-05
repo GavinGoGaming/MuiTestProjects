@@ -25,9 +25,9 @@ export default function Page() {
   return (
     <CssVarsProvider defaultMode='dark'><main style={{height:'100vh'}}>
       <Navigation active="home"/>
-      <TitleZone bottom="A parody web series about the worst client ever...." bottom2="coming February 25th to YouTube" key='title'/>
+      <TitleZone bottom="A parody web series about the worst client ever...." bottom2="coming February 25th to YouTube" key='title' isHome={true}/>
       <Sheet sx={{marginTop:'10px',width:'100%',background:'#F2F2FD',display:'flex',justifyContent:'center',alignItems:'center',height:'fit-content',paddingBottom:'35.7vh',color:'black'}}>
-            <iframe width="560" height="315" style={{zIndex:'100',position:'absolute',top:'-12.2vh',border:'0.2vw solid white'}} src="https://www.youtube-nocookie.com/embed/TiJbeO0mbZk?si=3105pg12Pbi-mOex&amp;controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            <iframe className="yt" width="560" height="315" style={{zIndex:'100',position:'absolute',top:'-12.2vh',border:'0.2vw solid white'}} src="https://www.youtube-nocookie.com/embed/TiJbeO0mbZk?si=3105pg12Pbi-mOex&amp;controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             <Typography sx={{
               width:'100%',
               px:'15vw',

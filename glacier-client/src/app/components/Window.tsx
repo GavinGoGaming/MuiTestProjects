@@ -14,7 +14,8 @@ export default function Window({
     className="",
     defaultClosed=true,
     defaultPosition={x:40,y:40},
-    defaultSize={width:800,height:500}
+    defaultSize={width:800,height:500},
+    onClose=()=>{}
   }: Readonly<{
     children: React.ReactNode;
     title: String;
@@ -26,6 +27,7 @@ export default function Window({
     defaultClosed?: boolean;
     defaultPosition?: {x:number,y:number};
     defaultSize?: {width:number,height:number};
+    onClose?: ()=>void;
   }>) {
 
     function close() {
@@ -33,6 +35,7 @@ export default function Window({
       if(document.getElementById(taskbarIconID+'-tb-app')) {
         (document.getElementById(taskbarIconID+'-tb-app') as HTMLDivElement).classList.remove('active');
       }
+      onClose();
     }
 
     useEffect(() => {

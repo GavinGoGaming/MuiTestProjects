@@ -10,8 +10,7 @@ function getWindowDimensions() {
 }
 
 export default function useWindowDimensions() {
-    if (typeof window !== "undefined") {
-        const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+        const [windowDimensions, setWindowDimensions] = useState({ width: 800, height: 500 });
 
         useEffect(() => {
             function handleResize() {
@@ -23,6 +22,4 @@ export default function useWindowDimensions() {
         }, []);
 
         return windowDimensions;
-    }
-    return {width: 800, height: 500};
 }

@@ -1,8 +1,8 @@
 'use client';
-import { Sheet, Typography } from "@mui/joy";
+import { Button, Sheet, Typography } from "@mui/joy";
 import { ReactNode } from "react";
 
-export default function TitleZone(props: {bottom: string, bottom2: string}) {
+export default function TitleZone({bottom, bottom2, isHome=false}: Readonly<{bottom: string, bottom2: string, isHome?: boolean}>) {
     return (
         <Sheet sx={{
             width: '100%',
@@ -16,7 +16,8 @@ export default function TitleZone(props: {bottom: string, bottom2: string}) {
           }}
           variant="plain">
             <img src="/de_logo.png" height="242" alt="" style={{height:'25vh',width:'auto',marginBottom:'2vh'}} />
-            <h2 className='paddingForTinyScreen' style={{textAlign: 'center',fontWeight:'400',color:'#F2F2FD',fontSize:'1.8vw'}}>{props.bottom}<br/>{props.bottom2}</h2>
-          </Sheet>
+            <h2 className='paddingForTinyScreen' style={{textAlign: 'center',fontWeight:'400',color:'#F2F2FD',fontSize:'1.8vw'}}>{bottom}<br/>{bottom2}</h2>
+            {isHome ? <Button className="bigsizemobile buytix" size={'lg'} sx={{background:'#5ECFFA',color:'black',marginTop:'40px',marginBottom:'80px',marginLeft:'15px',borderRadius:'1.4vw',height:'2.7vh',width:'auto',fontSize:'1.15vw'}} onClick={function(){window.open('https://events.humanitix.com/designing-empires-launch-party');}}>BUY LAUNCH PARTY TIX HERE</Button> : null}
+            </Sheet>
     );
 }

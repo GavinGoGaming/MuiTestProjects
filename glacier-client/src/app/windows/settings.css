@@ -29,7 +29,10 @@
     margin: 5px 0;
     position: relative;
 }
-.settings-section.active, .settings-section:hover {
+.settings-section.disabled {
+    color: #969696;
+}
+.settings-section.active, .settings-section:not(.disabled):hover {
     background: #ffffff36;
 }
 .settings-section.active::after {

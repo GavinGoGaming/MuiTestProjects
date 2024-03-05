@@ -148,7 +148,7 @@
 .btn > button:hover {
   text-decoration: underline;
 }
-iframe {
+iframe.yt {
   width: 36.9vw;
   height: 40vh;
 }
@@ -157,6 +157,9 @@ iframe {
 }
 .topftrtitle {
   font-size: 2.1vw;
+}
+.btmftrevent {
+  font-size: 1.5vw;
 }
 .crew {
   font-size: 1.5vw;
@@ -169,6 +172,51 @@ iframe {
     display: none !important;
   }
 }
+.extras {
+  text-align: center;
+  font-size: 1.1vw;
+  margin-top: 22px;
+  color: white;
+  display: flex;
+  padding-bottom: 20px;
+  position: relative;
+  margin-left:calc(17vw + 50px);
+}
+.extras.border {
+  border-bottom: 1px solid white;
+}
+.extras .full {
+  width: 100%;
+}
+.extras .left {
+  width: 50%;
+  float: left;
+}
+.extras .right {
+  width: 50%;
+  float: right;
+}
+.extras .tleft {
+  width: 33%;
+  float: left;
+}
+.extras .tmiddle {
+  width: 33%;
+  float: left;
+}
+.extras .tright {
+  width: 33%;
+  float: right;
+}
+
+.extras > b {
+  font-size: 1.4vw;
+  margin-top:40px;
+}
+.extras ul {
+  /* no dots on left side */
+  list-style-type: none;
+}
 @media only screen and (max-width: 600px) {
   .promoPageObject {
     text-align: center;
@@ -179,6 +227,13 @@ iframe {
   .mobileDo24px {
     font-size: 24px !important;
   }
+  .extras {
+    font-size: 0.875rem;
+    margin-left: 0;
+  }
+  /* .extras > b {
+    font-size: 32px;
+  } */
   img[alt="logo"] {
     width: 60px !important;
     height: auto !important;
@@ -189,14 +244,20 @@ iframe {
   }
   .deschome:not(.crew):not(.promo) {
     font-size:24px !important;
-    top: 120px !important;
+    top: 200px !important;
   }
-  .bigsizemobile  {
+  .bigsizemobile:not(.buytix)  {
     font-size: 24px !important;
     height: 40px;
     padding: 20px 30px !important;
     border-radius: 20px;
     width: 90px !important;
+  }
+  .bigsizemobile.buytix  {
+    font-size: 20px !important;
+    height: 40px;
+    padding: 20px 30px !important;
+    border-radius: 20px;
   }
   .deschome.promo {
     width: 90vw;
@@ -215,7 +276,7 @@ iframe {
     padding-right:10px !important;
     font-size: 21px !important;
   }
-  iframe {
+  iframe.yt {
     width: 98% !important;
     height: 200px !important;
   }
@@ -231,9 +292,13 @@ iframe {
   .topftrtitle {
     font-size: 32px !important;
   }
+  .btmftrevent {
+    font-size: 20px !important;
+  }
   #mc_embed_signup {
     width: 98vw;
   }
+  
 
 
 

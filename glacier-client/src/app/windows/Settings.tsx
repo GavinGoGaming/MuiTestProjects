@@ -13,15 +13,15 @@ export default function SettingsApp() {
           <div className="settings-split">
             <div className="left">
               <Input placeholder="Search settings..." />
-              <div className="settings-section">
+              <div className="settings-section disabled">
                 <img src="/windows/icons/System.webp" alt="" />
                 <p>System</p>
               </div>
-              <div className="settings-section">
+              <div className="settings-section disabled">
                 <img src="/windows/icons/Bluetooth & devices.webp" alt="" />
                 <p>Bluetooth & Devices</p>
               </div>
-              <div className="settings-section">
+              <div className="settings-section disabled">
                 <img src="/windows/icons/Network & internet.webp" alt="" />
                 <p>Network & Internet</p>
               </div>
@@ -37,19 +37,19 @@ export default function SettingsApp() {
                 <img src="/windows/icons/Accounts.webp" alt="" />
                 <p>Accounts</p>
               </div>
-              <div className="settings-section">
+              <div className="settings-section disabled">
                 <img src="/windows/icons/Time & language.webp" alt="" />
                 <p>Time & Language</p>
               </div>
-              <div className="settings-section">
+              <div className="settings-section disabled">
                 <img src="/windows/icons/Gaming.webp" alt="" />
                 <p>Gaming</p>
               </div>
-              <div className="settings-section">
+              <div className="settings-section disabled">
                 <img src="/windows/icons/Accessibility.webp" alt="" />
                 <p>Accessibility</p>
               </div>
-              <div className="settings-section">
+              <div className="settings-section disabled">
                 <img src="/windows/icons/Privacy & security.webp" alt="" />
                 <p>Privacy & Security</p>
               </div>

@@ -1,7 +1,7 @@
 'use client';
 import { Dropdown, Input, Option, OptionOnSelectData, SelectionEvents } from "@fluentui/react-components";
 import Window from "../components/Window";
-import xor from "../components/XOR";
+import xor from "../utils/XOR";
 import useWindowDimensions from "../utils/WindowSizes";
 
 export default function TeamViewerApp() {
