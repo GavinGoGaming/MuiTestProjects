@@ -45,7 +45,7 @@ export default function Navigation(props: {active:string}) {
                 <Button onClick={function(){window.location.href='/about';}} variant='plain' sx={{float:'right',fontSize:'1.3vw',width:'10vw',color:(props.active=='about'?'#5ECFFA':'inherit')}} size='lg' color='neutral'>ABOUT</Button>
               </div> */}
               <div style={{display:'inline-flex',marginRight:'1vw'}} className='btn'>
-                <Button onClick={function(){window.location.href='https://www.youtube.com/@designingempires/videos';}} variant='plain' style={{float:'right',fontSize:'1.3vw',width:'10vw'}} size='lg' color='neutral'>EPISODES</Button>
+                <Button onClick={function(){window.location.href='https://www.youtube.com/playlist?list=PL_LjAo92qZzd_q7zY8cNIk6G6t1gDEF4X';}} variant='plain' style={{float:'right',fontSize:'1.3vw',width:'10vw'}} size='lg' color='neutral'>EPISODES</Button>
               </div>
               <div style={{display:'inline-flex',marginRight:'1vw'}} className='btn'>
                 <Button onClick={function(){window.location.href='/cast';}} variant='plain' sx={{float:'right',fontSize:'1.3vw',width:'10vw',color:(props.active=='team'?'#5ECFFA':'inherit')}} size='lg' color='neutral'>TEAM</Button>

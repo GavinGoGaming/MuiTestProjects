@@ -18,7 +18,7 @@ export default function MobileNav() {
       <Menu>
         <MenuItem onClick={function(){window.location.href='/';}}>Home</MenuItem>
         {/* <MenuItem onClick={function(){window.location.href='/about';}}>About</MenuItem> */}
-        <MenuItem onClick={function(){window.location.href='https://www.youtube.com/@designingempires/videos';}}>Episodes</MenuItem>
+        <MenuItem onClick={function(){window.location.href='https://www.youtube.com/playlist?list=PL_LjAo92qZzd_q7zY8cNIk6G6t1gDEF4X';}}>Episodes</MenuItem>
         <MenuItem onClick={function(){window.location.href='/cast';}}>Team</MenuItem>
         <MenuItem onClick={function(){window.location.href='/contest';}}>Contest</MenuItem>
         <MenuItem onClick={function(){window.location.href='https://www.patreon.com/designingempires';}}>Patreon</MenuItem>
