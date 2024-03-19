@@ -1,8 +1,25 @@
-import { Dropdown, Input, Option, OptionOnSelectData, SelectionEvents } from "@fluentui/react-components";
+import { Button, Dropdown, Input, Option, OptionOnSelectData, SelectionEvents } from "@fluentui/react-components";
 import Window from "../components/Window";
 import './settings.css';
+import { useEffect } from "react";
 
 export default function SettingsApp() {
+  useEffect(() => {
+    var title = window.localStorage.getItem('title');
+    var icon = window.localStorage.getItem('icon');
+
+    if (title) {
+      document.title = title;
+    } else {
+      document.title = 'Glacier';
+      window.localStorage.setItem('title', 'Glacier');
+    }
+    if (icon) {
+      document.querySelector('link[rel="shortcut icon"]')?.setAttribute('href', `/windows/${icon}.png`);
+    }else {
+      window.localStorage.setItem('icon', 'glacierwhite');
+    }
+  },[]);
     const onChange = (event: SelectionEvents, data: OptionOnSelectData): void => {
         document.body.style.backgroundImage = `url("/windows/wallpaper${data.optionValue}.jpg")`;
         window.localStorage.setItem('background', `wallpaper${data.optionValue}.jpg`);
@@ -56,16 +73,20 @@ export default function SettingsApp() {
             </div>
             <div className="right">
               <h1>Personalization</h1>
-              <h4>Operating System Theme</h4>
-              <p>Select a different full-OS-theme for the window.</p>
-              <Dropdown id="theme-select" placeholder="Choose a new OS...">
-                <Option value="windows">Windows 11</Option>
-                <Option value="macos" disabled>Mac OS</Option>
-                <Option value="chrome" disabled>Chrome OS</Option>
-              </Dropdown>
-              <br/><br/>
-              <p>Choose a new wallpaper from a huge selection.</p>
-              <Dropdown id="background-select" onOptionSelect={onChange} placeholder="Choose a new wallpaper..." >
+              <b>Titles</b>
+              <br />
+              Window Title: <Input placeholder="glacier..." onChange={function(event, data) {
+                window.localStorage.setItem('title', data.value);
+                document.title = data.value;
+              }} appearance="underline"/><br/>
+              Window Icon: <Button onClick={()=>{
+                document.querySelector('.moreicons')?.classList.remove('closing');
+                document.querySelector('.moreicons')?.classList.add('opening');
+              }}>Edit Icon</Button>
+              <br />
+              <br />
+              <b>Themes</b><br/>
+              Background: <Dropdown id="background-select" onOptionSelect={onChange} placeholder="Choose a new wallpaper..." appearance="underline">
                 <Option value="23">Mac Mojave</Option>
                 <Option value="24">Mac Ocean</Option>
                 <Option value="25">Mac Big Sur</Option>

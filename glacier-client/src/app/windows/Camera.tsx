@@ -48,6 +48,13 @@ export default function CameraApp() {
                 timercooldown.classList.add('hidden');
                 takePhotoButton.disabled = false;
                   takeImage();
+                  setTimeout(() => {
+                    var dataURL = canvas.toDataURL("image/png");
+                    var a = document.createElement('a');
+                    a.href = dataURL;
+                    a.download = 'glacier-camera-image.png';
+                    a.click();
+                  }, 100);
                 // }, 1000);
               }, 1000);
             }, 1000);

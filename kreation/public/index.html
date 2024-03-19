@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kreation</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+    <style>
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('/minecraft.otf') format('opentype');
+        }
+
+        html, body {
+            font-family: 'Minecraft', sans-serif;
+            background: #111;
+            display: block;
+        }
+
+        main {
+            background: #171717;
+            width: 100vw;
+            padding: 0;
+            height: 80vh;
+            padding: 20px 15em;
+        }
+
+        header {
+            height: 15vh;
+        }
+
+        .messages {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-height: 90%;
+            overflow: scroll;
+        }
+
+        .bubble-left {
+            background: #222;
+            padding: 10px;
+            border-radius: 10px;
+            /* bubble on the left side, but not 50% */
+            margin-left: 0;
+            margin-right: auto;
+            max-width: 35%;
+            position: relative;
+            /* overflow: auto; */
+        }
+        .bubble-right {
+            background: #222;
+            padding: 10px;
+            border-radius: 10px;
+            /* bubble on the right side, but not 50% */
+            margin-left: auto;
+            margin-right: 0;
+            max-width: 35%;
+            position: relative;
+            /* overflow: auto; */
+        }
+        .bubble-left>.name, .bubble-right>.name {
+            position: absolute;
+            top: -25px;
+            left: 3px;
+        }
+        .bubble-left>img, .bubble-right>img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+        }
+        .bubble-left>img {
+            right: -40px;
+        }
+        .bubble-right>img {
+            left: -40px;
+        }
+        .self {
+            color: rgb(79, 196, 235);
+            right: 10px;
+        }
+
+        .input {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            width: calc(100% - 30em);
+            position: absolute;
+            bottom: 10px;
+        }
+        .input > .message {
+            width: 70%;
+        }
+        .input > button, .input > .name, .input > select {
+            width: 15%;
+        }
+    </style>
+</head>
+
+<body>
+    <center style="margin-top: 50px;">
+        <header>
+            <img src="/kreation.png" style="width:720px;" alt="">
+            <p style="font-size:larger;margin: 0px;">A quick way to chat in discord without having an account.</p>
+        </header>
+    </center>
+    <main>
+        <div class="messages">
+            <!-- <div class="bubble-left">
+                <img src="https://cdn.discordapp.com/embed/avatars/0.png">
+                <a class="name">user</a>message
+            </div> -->
+        </div>
+        <div class="input">
+            <!-- <select name="Channel" id="channel">
+                <option value="1219455695284473977">General</option>
+                <option value="1202104103711285248">In-Game</option>
+                <option value="1202477545614872596">Announcements</option>
+            </select> -->
+            <input type="text" class="name" placeholder="Username">
+            <input type="text" class="message" placeholder="Type a message...">
+            <button>Send</button>
+        </div>
+    </main>
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script>
+        const socket = io();
+        var messages = document.querySelector('.messages');
+        var input = document.querySelector('.input > .message');
+        var namei = document.querySelector('.input > .name');
+        var send = document.querySelector('.input > button');
+        var channel = document.querySelector('.input > select');
+
+        socket.on('general', (data) => {
+            // console.log('received general chat');
+            var bubble = document.createElement('div');
+            bubble.classList.add('bubble-left');
+            bubble.innerHTML = `<img src="${data.url}"><a class="name">${data.name}</a>${data.message}`;
+            messages.appendChild(bubble);bubble.scrollIntoView();
+        })
+        
+        function sendMessage() {
+            if(namei.value.trim() == '') {
+                toastr.error('Please enter a username!');
+                return;
+            }
+            if(input.value.trim() == '') {
+                toastr.error('Please enter a message!');
+                return;
+            }
+            var message = input.value;
+            var bubble = document.createElement('div');
+            bubble.classList.add('bubble-right');
+            bubble.innerHTML = '<img src="https://cdn.discordapp.com/embed/avatars/0.png"><a class="name self">You</a>' + message;
+            messages.appendChild(bubble);bubble.scrollIntoView();
+            socket.emit('send chat', {message: input.value, author: namei.value});
+            input.value = '';
+        }
+        document.addEventListener('keydown', function(e) {if (e.key === 'Enter') {
+            sendMessage();
+        }});
+        send.addEventListener('click', sendMessage);
+    </script>
+</body>
+
+</html>

@@ -3,24 +3,46 @@ import Window from '@/app/components/Window';
 import { getApps } from '@/app/utils/AppListHelper';
 import React, { useState, useEffect } from 'react';
 
-export function toggleStoreApp(id: string) {
-  let window = document.getElementsByClassName(id)[0];
-  if(window) {
-      if(window.classList.contains('closing')) {
-          window.classList.remove('closing');
-          window.classList.add('opening');
-          (document.querySelector(`.${id} > .w11-content > div > iframe`) as HTMLIFrameElement).contentWindow?.focus();
+export function toggleStoreApp(id: string, app: any) {
+  if(app.url.startsWith('glacier://')) {
+    let window = document.getElementsByClassName(app.url.substring('glacier://'.length))[0];
+    if(window) {
+        if(window.classList.contains('closing')) {
+            window.classList.remove('closing');
+            window.classList.add('opening');
+            let allWindows = document.querySelectorAll('.w11-window');
+            allWindows.forEach((x)=>{
+                (x as HTMLDivElement).style.zIndex = '4';
+            });
+  
+            (document.getElementsByClassName(id)[0] as HTMLDivElement).style.zIndex = '5';
+        }else {
+            window.classList.remove('opening');
+            window.classList.add('closing');
+        }
+    }   
+  }else {
+    let window = document.getElementsByClassName(id)[0];
+    if(window) {
+        if(window.classList.contains('closing')) {
+            window.classList.remove('closing');
+            window.classList.add('opening');
+            
+              var frame = (document.querySelector(`.${id} > .w11-content > div > iframe`) as HTMLIFrameElement);
+              frame.src = frame.dataset.src as string;
+              frame.focus();
 
-          let allWindows = document.querySelectorAll('.w11-window');
-          allWindows.forEach((x)=>{
-              (x as HTMLDivElement).style.zIndex = '4';
-          });
+            let allWindows = document.querySelectorAll('.w11-window');
+            allWindows.forEach((x)=>{
+                (x as HTMLDivElement).style.zIndex = '4';
+            });
 
-          (document.getElementsByClassName(id)[0] as HTMLDivElement).style.zIndex = '5';
-      }else {
-          window.classList.remove('opening');
-          window.classList.add('closing');
-      }
+            (document.getElementsByClassName(id)[0] as HTMLDivElement).style.zIndex = '5';
+        }else {
+            window.classList.remove('opening');
+            window.classList.add('closing');
+        }
+    }
   }
 }
 
@@ -45,7 +67,7 @@ const StoreApps = () => {
   return (
     <div>
       {apps.map((app, index) => (
-        <FrameWindow key={index} defaultUseUV={process.env.NODE_ENV=='development' ? false : app.unblock} id={(nameToID(app.name))} url={app.url} title={app.name}/>
+        <>{!app.url.startsWith('glacier://') ? <FrameWindow key={index} defaultUseUV={process.env.NODE_ENV=='development' ? false : app.unblock} id={(nameToID(app.name))} url={app.url} title={app.name}/> : null}</>
       ))}
     </div>
   );

@@ -14,6 +14,8 @@ import Navigation from './components/Navigation'
 import HrefButton from './components/HrefBtn';
 import { Folder } from '@mui/icons-material';
 import { TextField } from '@mui/material';
+import SoundcloudBox from './components/SoundcloudBox';
+import { SpotifyEmbed } from 'spotify-embed';
 
 export default function Page() {
   React.useEffect(() => {
@@ -29,16 +31,16 @@ export default function Page() {
       var tokens = JSON.parse(window.localStorage.getItem('token')||'{}');
 
       if(tokens.local){
-        enableButton('local');
+        setTimeout(()=>{enableButton('local');},300);
       }
       if(tokens.spotify){
-        enableButton('spotify');
+        setTimeout(()=>{enableButton('spotify');},300);
       }
       if(tokens.youtube){
-        enableButton('youtube');
+        setTimeout(()=>{enableButton('youtube');},300);
       }
       if(tokens.soundcloud){
-        enableButton('soundcloud');
+        setTimeout(()=>{enableButton('soundcloud');},300);
       }
     }else {
       window.localStorage.setItem('token', JSON.stringify({'local':null,'spotify':null,'youtube':null,'soundcloud':null}));
@@ -51,11 +53,13 @@ export default function Page() {
         <h1 style={{fontSize:'4rem'}}>Welcome to Notify.</h1>
         <h2>What do you want to listen to today?</h2>
         <div style={{marginTop:'2rem',display:'flex',justifyContent:'center'}}>
-          <Button id='local_button' disabled size='lg' color='primary' style={{marginRight:'10px'}}><Folder style={{marginRight:'10px',fontSize:'50px'}}/>My Own Music</Button>
-          <Button id='spotify_button' disabled size='lg' color='success'><img src="/Spotify_icon.svg" alt="" style={{marginRight:'10px'}} width="50px"/>Spotify</Button>
-          <Button id='youtube_button' disabled size='lg' color='danger' style={{marginLeft:'10px'}}><img src="/Youtube_Music_icon.svg" alt="" style={{marginRight:'10px'}} height="50px"/>YouTube Music</Button>
-          <Button id='soundcloud_button' disabled size='lg' color='warning' style={{marginLeft:'10px'}}><img src="/soundcloud-logo-icon.svg" alt="" style={{marginRight:'10px'}} height="50px"/>SoundCloud</Button>
+          <Button onClick={function(){window.location.href='/local';}} id='local_button' disabled size='lg' color='primary' style={{marginRight:'10px'}}><Folder style={{marginRight:'10px',fontSize:'50px'}}/>My Own Music</Button>
+          <Button onClick={function(){window.location.href='/spotify';}} id='spotify_button' disabled size='lg' color='success'><img src="/Spotify_icon.svg" alt="" style={{marginRight:'10px'}} width="50px"/>Spotify</Button>
+          {/* <Button id='youtube_button' disabled size='lg' color='danger' style={{marginLeft:'10px'}}><img src="/Youtube_Music_icon.svg" alt="" style={{marginRight:'10px'}} height="50px"/>YouTube Music</Button> */}
+          <Button onClick={function(){window.location.href='/soundcloud';}} id='soundcloud_button' disabled size='lg' color='danger' style={{marginLeft:'10px'}}><img src="/soundcloud-logo-icon.svg" alt="" style={{marginRight:'10px'}} height="50px"/>SoundCloud</Button>
         </div>
+        <SoundcloudBox id={1106398864} width={'40%'} height={20}/>
+        <SpotifyEmbed src='https://open.spotify.com/album/4gc3hBMuSMWNYfXgxuhp0Y' size={'compact'}/>
       </Sheet>
 
 

@@ -1,4 +1,5 @@
 'use client';
+import { useEffect } from "react";
 import Draggable from "react-draggable";
 
 // class taskbarapp
@@ -36,6 +37,16 @@ export default function Taskbar({
             }
         }
     }
+    useEffect(()=>{
+        setInterval(()=>{
+            let time = document.getElementById('tbtime');
+            let date = document.getElementById('tbdate');
+            if(time && date) {
+                time.innerHTML = `${new Date().getHours()>12?new Date().getHours()-12:new Date().getHours()}:${new Date().getMinutes()} ${new Date().getHours()>12?'PM':'AM'}`;
+                date.innerHTML = `${(new Date().getMonth()+1) + '/' + new Date().getDay() + '/' + new Date().getFullYear()}`;
+            }
+        }, 1000);
+    })
     return (
         <div id="taskbar" className="w11-taskbar">
             <div className="w11-taskbar-app" id="startmenu-tb-app" onClick={function(){toggle({window: 'startmenu',icon:'',name:''}, true)}}>
@@ -49,6 +60,13 @@ export default function Taskbar({
                     <span>{app.name}</span>
                 </div>
             ))}
+
+            <div className="w11-rightside">
+                <div className="timeDate">
+                    <div id='tbtime'>{new Date().getHours()>12?new Date().getHours()-12:new Date().getHours()}:{new Date().getMinutes()} {new Date().getHours()>12?'PM':'AM'}</div>
+                    <div id='tbdate'>{new Date().getMonth()+1}/{new Date().getDay()}/{new Date().getFullYear()}</div>
+                </div>
+            </div>
         </div>
     )
 }

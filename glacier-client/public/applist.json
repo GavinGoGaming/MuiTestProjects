@@ -1,122 +1,162 @@
 [
     {
         "name": "PolyTrack",
+        "unblock":true,
         "image": "https://i.ibb.co/zsS3zQg/polyimage.png",
         "description": "PolyTrack is a low-poly racing game with loops, jumps and high speeds, where every millisecond counts.",
         "url": "https://www.kodub.com/apps/polytrack",
-        "category": "Competitive,Racing Games,Games",
-        "unblock": true
-    },
-    {
-        "name": "Tetr.io",
-        "image": "https://avatars.githubusercontent.com/u/66926598?s=200&v=4",
-        "description": "Puzzle together in this modern yet familiar online stacker. play against friends and foes all over the world, or claim a spot on the leaderboards - the stacker future is yours!",
-        "url": "https://tetr.io/",
-        "category": "Competitive,Puzzle Games,Retro,Games",
-        "unblock": true
+        "category": "Competitive,Racing Games,Games"
     },
     {
         "name": "Mari0",
         "image": "https://upload.wikimedia.org/wikipedia/en/1/1f/Mari0_video_game_logo.png",
         "description": "Mari0 is a 2012 side-scrolling platform video game developed by German indie developer Maurice Guégan with creative input from Sašo Smolej and released onto their website Stabyourself.net. It combines gameplay elements from Nintendo's Super Mario series and Valve's Portal series.",
-        "url": "https://tannerrogalsky.com/mari0/",
+        "url": "/Mari0/index.html",
         "category": "Puzzle Games,Mario,Retro,Games",
-        "unblock": true
+        "unblock": false
     },
     {
         "name": "Discord",
-        "image": "https://static.vecteezy.com/system/resources/previews/006/892/625/large_2x/discord-logo-icon-editorial-free-vector.jpg",
+        "unblock":true,
+        "image": "data:image/png;base64,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",
         "description": "Discord is an instant messaging and VoIP social platform which allows communication through voice calls, video calls, text messaging, and media and files. Communication can be private or take place in virtual communities called servers.",
         "url": "https://discord.com/channels/@me",
-        "category": "Social Media,Apps",
-        "unblock": true
-    },
-    {
-        "name": "TeamViewer",
-        "image": "https://yt3.googleusercontent.com/h109MecJs_Iez16imGDVtSpwk1vqy5EcjQD06tdOa8x5CwvsVWI992RnIlmsi9UGMz26ZUZSCg=s900-c-k-c0x00ffffff-no-rj",
-        "description": "TeamViewer is a mutli-functional remote desktop and remote access software that allows you to control and access other devices from anywhere in the world, allowing you to connect to your home computers from within Glacier.",
-        "url": "https://web.teamviewer.com",
-        "category": "Remote Desktop,Apps",
-        "unblock": true
+        "category": "Social Media,Apps"
     },
     {
         "name": "Instagram",
+        "unblock":true,
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/300px-Instagram_logo_2022.svg.png",
         "description": "Instagram is an American photo and video sharing social networking service owned by Meta Platforms. It allows users to upload media that can be edited with filters, be organized by hashtags, and be associated with a location via geographical tagging. Posts can be shared publicly or with preapproved followers.",
         "url": "https://www.instagram.com/",
-        "category": "Social Media,Apps",
-        "unblock": true
+        "category": "Social Media,Apps"
     },
     {
         "name": "Twitter",
+        "unblock":true,
         "image": "https://play-lh.googleusercontent.com/A-Rnrh0J7iKmABskTonqFAANRLGTGUg_nuE4PEMYwJavL3nPt5uWsU2WO_DSgV_mOOM=w480-h960-rw",
         "description": "Twitter, Inc. was an American social media company based in San Francisco, California. The company operated the social networking service Twitter and previously the Vine short video app and Periscope livestreaming service.",
         "url": "https://twitter.com/?lang=en",
-        "category": "Social Media,Apps",
-        "unblock": true
+        "category": "Social Media,Apps"
     },
     {
         "name": "YouTube",
+        "unblock":true,
         "image": "https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc=s96-rw",
         "description": "YouTube is an American online video sharing and social media platform owned by Google. Accessible worldwide, it was launched on February 14, 2005, by Steve Chen, Chad Hurley, and Jawed Karim, three former employees of PayPal.",
         "url": "https://www.youtube.com/",
-        "category": "Social Media,Video Player,Apps",
-        "unblock": true
+        "category": "Social Media,Video Player,Apps"
     },
     {
         "name": "Spotify",
+        "unblock":true,
         "image": "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc=w480-h960-rw",
         "description": "Spotify is a digital music service that gives you access to millions of songs.",
         "url": "https://open.spotify.com/?",
-        "category": "Social Media,Music,Apps",
-        "unblock": true
+        "category": "Social Media,Music,Apps,"
     },
     {
         "name": "Sandboxels",
-        "image": "https://a.silvergames.com/j/b/the-sandbox.jpg",
+        "unblock":true,
+        "image": "https://static.wikia.nocookie.net/sandboxels/images/e/e6/Site-logo.png/revision/latest?cb=20230508152305",
         "description": "Sandboxels is a free falling-sand simulator that can be played in your browser. It features heat simulation, electricity, density, chemical reactions, cooking, and fire spread. With over 500 unique elements to play with, Sandboxels is a great way to pass the time and relax.",
         "url": "https://sandboxels.r74n.com/",
-        "category": "Games",
-        "unblock": true
+        "category": "Games"
     },
     {
         "name": "Netflix",
+        "unblock":true,
         "image": "https://play-lh.googleusercontent.com/TBRwjS_qfJCSj1m7zZB93FnpJM5fSpMA_wUlFDLxWAb45T9RmwBvQd5cWR5viJJOhkI=w480-h960-rw",
         "description": "Netflix is an American subscription video on-demand over-the-top streaming service. The service primarily distributes original and acquired films and television shows from various genres, and it is available internationally in multiple languages.",
         "url": "https://www.netflix.com/",
-        "category": "Video Player,Apps",
-        "unblock": true
+        "category": "Video Player,Apps"
     },
     {
         "name": "WebRetro",
-        "image": "https://web.libretro.com/media/canvas.png",
+        "unblock":true,
+        "image": "https://teen.media/assets/webretro.jpeg",
         "description": "Play many retro games on WebRetro, including Mario, Sonic, and more!",
         "url": "https://binbashbanana.github.io/webretro/",
-        "category": "Retro,Games",
-        "unblock": true
+        "category": "Retro,Games"
     },
     {
-        "name": "1.8 Ultimate",
+        "name": "EM 1.8",
+        "unblock":true,
         "image": "https://m.media-amazon.com/images/I/51L0-hXjy+L.png",
-        "description": "Play Minecraft 1.8 singleplayer, now including RTX Shaders.",
+        "description": "Play Minecraft 1.8 singleplayer, including RTX Shaders.",
         "url": "https://www.autistici.org/eaglercraft/play/EaglercraftX_1.8/",
-        "category": "Games,Minecraft",
-        "unblock": true
+        "category": "Games,Minecraft"
     },
     {
         "name": "v86",
+        "unblock":true,
         "image": "/windows/polyimage.png",
         "description": "Access old versions of Windows through Glacier like 3.1, 1.01, 95, 98, and even 2000!",
         "url": "https://copy.sh/v86/",
-        "category": "Retro,Apps",
-        "unblock": true
+        "category": "Retro,Apps"
     },
     {
         "name": "TikTok",
+        "unblock":true,
         "image": "https://cdn.shopify.com/app-store/listing_images/ca1f1238d808935b77771b399df6e9ab/icon/CLe6nrP0lu8CEAE=.png",
         "description": "TikTok, whose mainland Chinese counterpart is Douyin, is a short-form video hosting service owned by ByteDance. It hosts user-submitted videos, which can range in duration from 3 seconds to 10 minutes. Since their launches, TikTok and Douyin have gained global popularity.",
         "url": "https://www.tiktok.com/en/",
-        "category": "Social Media,Apps",
-        "unblock": true
+        "category": "Social Media,Apps"
+    },
+    {
+        "name": "Google Docs",
+        "unblock":true,
+        "image": "https://play-lh.googleusercontent.com/emmbClh_hm0WpWZqJ0X59B8Pz1mKoB9HVLkYMktxhGE6_-30SdGoa-BmYW73RJ8MGZQ=s96-rw",
+        "description": "Google Docs is an online word processor included as part of the free, web-based Google Docs Editors suite offered by Google, which also includes Google Sheets, Google Slides, Google Drawings, Google Forms, Google Sites and Google Keep.",
+        "url": "https://docs.google.com/",
+        "category": "School,Apps"
+    },
+    {
+        "name": "Google Slides",
+        "unblock":true,
+        "image": "https://play-lh.googleusercontent.com/DG-zbXPr8LItYD8F2nD4aR_SK_jpkipLBK77YWY-F0cdJt67VFgCHZtRtjsakzTw3EM=s96-rw",
+        "description": "Google Slides is a presentation program included as part of the free, web-based Google Docs suite offered by Google. Google Slides is available as a web application, mobile app for: Android, iOS, and as a desktop application on Google's ChromeOS. The app is compatible with Microsoft PowerPoint file formats.",
+        "url": "https://docs.google.com/presentation/",
+        "category": "School,Apps"
+    },
+    {
+        "name": "Google Sheets",
+        "unblock":true,
+        "image": "https://play-lh.googleusercontent.com/keE2gN0Hqh8-Tsf_RYZ_-yS2uo6ToqYVyRBv_UZaLXsgeeHBd2YPcEUWEF4DEtfGyb1h=s96-rw",
+        "description": "Google Sheets is a spreadsheet application included as part of the free, web-based Google Docs Editors suite offered by Google. Google Sheets is available as a web application; a mobile app for: Android, iOS, and as a desktop application on Google's ChromeOS. The app is compatible with Microsoft Excel file formats.",
+        "url": "https://docs.google.com/spreadsheets/",
+        "category": "School,Apps"
+    },
+    {
+        "name": "Google Classroom",
+        "unblock":true,
+        "image": "https://play-lh.googleusercontent.com/w0s3au7cWptVf648ChCUP7sW6uzdwGFTSTenE178Tz87K_w1P1sFwI6h1CLZUlC2Ug=w480-h960-rw",
+        "description": "Google Classroom is a free blended learning platform developed by Google for educational institutions that aims to simplify creating, distributing, and grading assignments. The primary purpose of Google Classroom is to streamline the process of sharing files between teachers and students.",
+        "url": "https://classroom.google.com/",
+        "category": "School,Apps"
+    },
+    {
+        "name": "Creatur.io",
+        "unblock":true,
+        "image": "https://play-lh.googleusercontent.com/rulMJvqawkcLfWJkjaF_87gGyF5NpfL8ACYuCAEzV46dpJN_yEWPaLAX8tsvA-BMH94=w480-h960-rw",
+        "description": "Creatur.io is a fun and cute multiplayer cat game in which you control an adorable little cat! You must provide your cat with food, help them grow, and fight against the other cats in the arena for domination! Throughout the map, there are a limitless number of gems to collect that give your character XP and help them grow. As you level up you can evolve and learn new abilities such as a lunge or a speed burst.",
+        "url": "https://creatur.io/",
+        "category": "Competitive,Games"
+    },
+    {
+        "name": "ChatGPT",
+        "unblock":true,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/800px-ChatGPT_logo.svg.png",
+        "description": "ChatGPT is a chatbot developed by OpenAI and launched on November 30, 2022. Based on a large language model, it enables users to refine and steer a conversation towards a desired length, format, style, level of detail, and language.",
+        "url": "https://chat.openai.com//",
+        "category": "Apps"
+    },
+    {
+        "name": "Window Icons",
+        "unblock":false,
+        "image": "/windows/glacierwhite.png",
+        "description": "Window icons to customize glacier!",
+        "url":"glacier://moreicons",
+        "category": "Apps"
     }
 ]

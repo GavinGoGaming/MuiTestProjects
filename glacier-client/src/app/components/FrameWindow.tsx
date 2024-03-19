@@ -16,8 +16,7 @@ export default function FrameWindow({
   defaultClosed=true,
   defaultPosition={x:40,y:40},
   defaultSize={width:useWindowDimensions().width,height:useWindowDimensions().height-40},
-  defaultUseUV=true,
-  onClose=()=>{}
+  defaultUseUV=true
 }: Readonly<{
   title: string;
   url: string;
@@ -30,12 +29,18 @@ export default function FrameWindow({
   defaultPosition?: {x:number,y:number};
   defaultSize?: {width:number,height:number};
   defaultUseUV?: boolean;
-  onClose?: ()=>void;
 }>) {
+  function toggleOff() {
+    let window = document.getElementsByClassName(id)[0];
+    if(window) {
+            var frame = (document.querySelector(`.${id} > .w11-content > div > iframe`) as HTMLIFrameElement);
+            frame.src = '';
+    }
+  }
     return (
-      <Window title={title} id={id} defaultPosition={defaultPosition} defaultSize={defaultSize} taskbarIconID={id} color={color} seperateBorder={seperateBorder} onClose={onClose} defaultClosed={defaultClosed} className={className}>
+      <Window title={title} id={id} defaultPosition={defaultPosition} defaultSize={defaultSize} taskbarIconID={id} color={color} seperateBorder={seperateBorder} onClose={toggleOff} defaultClosed={defaultClosed} className={className}>
         <div className="window-full">
-          <iframe src={defaultUseUV ? xor.quickURL(url) : url} style={{border:'0px',position:'absolute',width:'100%',height:'calc(100% - 40px)'}}></iframe>
+          <iframe id={id} data-src={defaultUseUV ? xor.quickURL(url) : url} style={{border:'0px',position:'absolute',width:'100%',height:'calc(100% - 40px)'}}></iframe>
         </div>
       </Window>
     );

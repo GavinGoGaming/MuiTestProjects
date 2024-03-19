@@ -28,13 +28,13 @@ import {
 import TerminalApp from "./windows/Terminal";
 import SettingsApp from "./windows/Settings";
 import CalculatorApp from "./windows/Calculator";
-import TeamViewerApp from './windows/TeamViewer';
 import EdgeApp from "./windows/MicrosoftEdge";
 import CameraApp from "./windows/Camera";
 import StoreApp from "./windows/Store";
 import AppListHelper, { getApps } from "./utils/AppListHelper";
 import FrameWindow from "./components/FrameWindow";
 import StoreApps from "./windows/store/StoreApps";
+import MoreIconsApp from "./windows/MoreIcons";
 
 export default function Home() {
   useEffect(() => {
@@ -74,6 +74,8 @@ export default function Home() {
       <CameraApp/>
       <StoreApp/>
       <StoreApps/>
+
+      <MoreIconsApp/>
     </main>
     </FluentProvider>
   );
