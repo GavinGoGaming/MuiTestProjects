@@ -1,9 +1,101 @@
 import { Button, Dropdown, Input, Option, OptionOnSelectData, SelectionEvents } from "@fluentui/react-components";
 import Window from "../components/Window";
 import './settings.css';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Emoji from "../components/Emoji";
+import xor from "../utils/XOR";
+
+function Personalization() {
+  
+  const onChange = (event: SelectionEvents, data: OptionOnSelectData): void => {
+    document.body.style.backgroundImage = `url("/windows/wallpaper${data.optionValue}.jpg")`;
+    window.localStorage.setItem('background', `wallpaper${data.optionValue}.jpg`);
+  };
+
+  return (
+    <>
+    <h1>Personalization</h1>
+    <b>Titles</b>
+    <br />
+    Window Title: <Input placeholder="glacier..." onChange={function(event, data) {
+      window.localStorage.setItem('title', data.value);
+      document.title = data.value;
+    }} appearance="underline"/><br/>
+    Window Icon: <Button onClick={()=>{
+      document.querySelector('.moreicons')?.classList.remove('closing');
+      document.querySelector('.moreicons')?.classList.add('opening');
+    }}>Edit Icon</Button>
+    <br />
+    <br />
+    <b>Themes</b><br/>
+    Background: <Dropdown id="background-select" onOptionSelect={onChange} placeholder="Choose a new wallpaper..." appearance="underline">
+      <Option value="23">Mac Mojave</Option>
+      <Option value="24">Mac Ocean</Option>
+      <Option value="25">Mac Big Sur</Option>
+      <Option value="26">Mac Monterey</Option>
+      <Option value="2">Sphere (Blue/Green)</Option>
+      <Option value="3">Sphere (Blue/Red)</Option>
+      <Option value="1">Motion Layers</Option>
+      <Option value="9">Motion Cones</Option>
+      <Option value="10">Motion Ribbon</Option>
+      <Option value="11">Motion Liquid</Option>
+      <Option value="14">Sunrise Ocean</Option>
+      <Option value="12">Daytime Ocean</Option>
+      <Option value="22">Sunset Ocean</Option>
+      <Option value="13">Sunrise Lake</Option>
+      <Option value="15">Sunrise Desert</Option>
+      <Option value="16">Fluent Blue</Option>
+      <Option value="17">Fluent Green</Option>
+      <Option value="18">Fluent Pink</Option>
+      <Option value="19">Fluent Gray</Option>
+      <Option value="6">Fluent Black</Option>
+      <Option value="20">Windows Dark</Option>
+      <Option value="21">Windows Light</Option>
+      <Option value="8">Windows Kali</Option>
+    </Dropdown>
+    </>
+  )
+}
+
+function Accounts() {
+  return (
+    <h1>Accounts</h1>
+  );
+}
+
+function Apps() {
+  const [input, setInput] = useState('');
+  const [output, setOutput] = useState('');
+  return (
+    <>
+      <h1>Apps</h1>
+      <b>Input</b><br/>
+      <Input placeholder="XOR Input" onChange={(event, data)=>{setInput(data.value)}}/><br/><br/>
+      <b>Output</b><br/>
+      <Input placeholder="XOR Output" readOnly={true} value={output}/><br/>
+      <a id="xor_output_url" target="_blank" style={{color:'#57575B'}}>Open URL Output</a>
+      <br />
+      <br />
+      <Button onClick={()=>{
+        setOutput(xor.decode(input));
+        (document.getElementById('xor_output_url') as HTMLAnchorElement).style.color = '#57575B';
+      }}>Decode</Button>
+      <Button onClick={()=>{
+        setOutput(xor.encode(input));
+        (document.getElementById('xor_output_url') as HTMLAnchorElement).style.color = '#57575B';
+      }}>Encode</Button>
+      <Button onClick={()=>{
+        setOutput(xor.quickURL(input));
+        document.getElementById('xor_output_url')?.setAttribute('href', xor.quickURL(input));
+        (document.getElementById('xor_output_url') as HTMLAnchorElement).style.color = '#28A9FF';
+      }}>Encode to URL</Button>
+    </>
+  );
+}
 
 export default function SettingsApp() {
+  const [tab, setTab] = useState('personalization');
+
   useEffect(() => {
     var title = window.localStorage.getItem('title');
     var icon = window.localStorage.getItem('icon');
@@ -20,10 +112,6 @@ export default function SettingsApp() {
       window.localStorage.setItem('icon', 'glacierwhite');
     }
   },[]);
-    const onChange = (event: SelectionEvents, data: OptionOnSelectData): void => {
-        document.body.style.backgroundImage = `url("/windows/wallpaper${data.optionValue}.jpg")`;
-        window.localStorage.setItem('background', `wallpaper${data.optionValue}.jpg`);
-      };
     return (
         <Window title="Settings" id="settings" taskbarIconID="settings" color={'gray'} seperateBorder="1px solid #cccccc0a">
         <div className="window-padding">
@@ -42,15 +130,15 @@ export default function SettingsApp() {
                 <img src="/windows/icons/Network & internet.webp" alt="" />
                 <p>Network & Internet</p>
               </div>
-              <div className="settings-section active">
+              <div className={`settings-section ${tab === 'personalization' && 'active'}`} onClick={()=>{setTab('personalization')}}>
                 <img src="/windows/icons/Personalisation.webp" alt="" />
                 <p>Personalization</p>
               </div>
-              <div className="settings-section">
+              <div  className={`settings-section ${tab === 'apps' && 'active'}`} onClick={()=>{setTab('apps')}}>
                 <img src="/windows/icons/Apps.webp" alt="" />
                 <p>Apps</p>
               </div>
-              <div className="settings-section">
+              <div  className={`settings-section ${tab === 'accounts' && 'active'}`} onClick={()=>{setTab('accounts')}}>
                 <img src="/windows/icons/Accounts.webp" alt="" />
                 <p>Accounts</p>
               </div>
@@ -72,45 +160,9 @@ export default function SettingsApp() {
               </div>
             </div>
             <div className="right">
-              <h1>Personalization</h1>
-              <b>Titles</b>
-              <br />
-              Window Title: <Input placeholder="glacier..." onChange={function(event, data) {
-                window.localStorage.setItem('title', data.value);
-                document.title = data.value;
-              }} appearance="underline"/><br/>
-              Window Icon: <Button onClick={()=>{
-                document.querySelector('.moreicons')?.classList.remove('closing');
-                document.querySelector('.moreicons')?.classList.add('opening');
-              }}>Edit Icon</Button>
-              <br />
-              <br />
-              <b>Themes</b><br/>
-              Background: <Dropdown id="background-select" onOptionSelect={onChange} placeholder="Choose a new wallpaper..." appearance="underline">
-                <Option value="23">Mac Mojave</Option>
-                <Option value="24">Mac Ocean</Option>
-                <Option value="25">Mac Big Sur</Option>
-                <Option value="26">Mac Monterey</Option>
-                <Option value="2">Sphere (Blue/Green)</Option>
-                <Option value="3">Sphere (Blue/Red)</Option>
-                <Option value="1">Motion Layers</Option>
-                <Option value="9">Motion Cones</Option>
-                <Option value="10">Motion Ribbon</Option>
-                <Option value="11">Motion Liquid</Option>
-                <Option value="14">Sunrise Ocean</Option>
-                <Option value="12">Daytime Ocean</Option>
-                <Option value="22">Sunset Ocean</Option>
-                <Option value="13">Sunrise Lake</Option>
-                <Option value="15">Sunrise Desert</Option>
-                <Option value="16">Fluent Blue</Option>
-                <Option value="17">Fluent Green</Option>
-                <Option value="18">Fluent Pink</Option>
-                <Option value="19">Fluent Gray</Option>
-                <Option value="6">Fluent Black</Option>
-                <Option value="20">Windows Dark</Option>
-                <Option value="21">Windows Light</Option>
-                <Option value="8">Windows Kali</Option>
-              </Dropdown>
+              {tab === 'personalization' && <Personalization />}
+              {tab === 'accounts' && <Accounts />}
+              {tab === 'apps' && <Apps />}
             </div>
           </div>
         </div>

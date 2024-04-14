@@ -80,12 +80,62 @@
         "category": "Retro,Games"
     },
     {
-        "name": "EM 1.8",
+        "name": "Among Us",
         "unblock":true,
+        "image":"https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec",
+        "description": "Play Among Us on Glacier via now.gg",
+        "url": "https://now.gg/apps/innersloth-llc/4047/among-us.html",
+        "category": "Games,Strategy",
+        "cssInject": "/roblox.css|500"
+    },
+    {
+        "name": "Roblox Website",
+        "unblock":true,
+        "image":"https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg",
+        "description": "View roblox groups and more on Roblox.com",
+        "url": "https://web.roblox.com",
+        "category": "Games,Roblox"
+    },
+    {
+        "name": "Kaido Anime",
+        "url": "https://kaido.to",
+        "unblock": true,
+        "category": "Apps,Anime",
+        "description": "An easy, free, anime viewing website!",
+        "image": "/windows/kaido.png"
+    },
+    {
+        "name": "GeoFS",
+        "url": "https://geofs.com/geofs.php",
+        "image": "https://www.geo-fs.com/images/knowledge-panel.jpg",
+        "category": "Games,Flight Simulator",
+        "unblock": true,
+        "description": "GeoFS is a free, online flight simulator, with global scenery, that runs in your web browser. Whether you are a licensed pilot practicing VFR, an aviation enthusiast or just looking for some fun flying in beautiful landscapes, you can enjoy any of the 20 available aircraft, ranging from para-glider to airliners, absolutely anywhere in the world."
+    },
+    {
+        "name": "Minecraft Forge",
+        "unblock":false,
         "image": "https://m.media-amazon.com/images/I/51L0-hXjy+L.png",
-        "description": "Play Minecraft 1.8 singleplayer, including RTX Shaders.",
-        "url": "https://www.autistici.org/eaglercraft/play/EaglercraftX_1.8/",
-        "category": "Games,Minecraft"
+        "description": "Play Minecraft 1.8 singleplayer, including RTX Shaders and Forge Mod Loader.",
+        "url": "%BASE%/minecraft/forge/EaglerForge_125_18.html",
+        "category": "Minecraft,Mods"
+    },
+    {
+        "name": "Minecraft",
+        "unblock":false,
+        "image": "https://m.media-amazon.com/images/I/51L0-hXjy+L.png",
+        "description": "Play Minecraft however you like!",
+        "url": "glacier://mclauncher",
+        "category": "Games,Minecraft,Mods"
+    },
+    {
+        "name": "Forge Mod List",
+        "unblock":false,
+        "image": "/minecraft/forge/modrinth.ico",
+        "description": "A simple modlist for Minecraft Forge",
+        "url": "/minecraft/forge/modlist.html",
+        "category": "Games,Minecraft,Mods",
+        "cssInject": "/minecraft/forge/inject.css|100"
     },
     {
         "name": "v86",
@@ -152,11 +202,143 @@
         "category": "Apps"
     },
     {
-        "name": "Window Icons",
+        "name": "Bloons TD 5",
         "unblock":false,
-        "image": "/windows/glacierwhite.png",
-        "description": "Window icons to customize glacier!",
-        "url":"glacier://moreicons",
-        "category": "Apps"
+        "image": "https://assets1.ignimgs.com/2017/05/05/bloons-td-5-1494021512734.jpg",
+        "description": "Bloons TD 5 is a tower defense game that was released on December 13, 2011, and as of February 2015, it is available on the App Store, Google Play, Steam, and PlayStation Store. In the game, players build towers made up of monkeys, cannons, glue, and many more to pop bloons before they reach the end of the path.",
+        "url": "/btd5.html",
+        "category": "Games,Strategy"
+    },
+    {
+        "name": "Snow Rider 3D",
+        "unblock":true,
+        "image": "https://img.gamedistribution.com/3b79a8537ebc414fb4f9672a9b8c68c8-512x512.jpeg",
+        "description": "Snow Rider 3D is a fun snowboarding game. Do you have what it takes to be the best snowboarder? Prove your skills and reach the highest score while collecting gifts and coins!",
+        "url": "https://html5.gamedistribution.com/3b79a8537ebc414fb4f9672a9b8c68c8/",
+        "category": "Games,Shooter"
+    },
+    {
+        "name": "Funny Shooter 2",
+        "unblock":true,
+        "image": "https://img.gamedistribution.com/a1b7ac4025214a5cb0bd01a4f675513a-512x512.jpeg",
+        "description": "Funny Shooter 2 is a fun shooter game. Collect coins, defeat all enemies, and reach the end of the level!",
+        "url": "https://html5.gamedistribution.com/a1b7ac4025214a5cb0bd01a4f675513a/",
+        "category": "Games,Shooter"
+    },
+    {
+        "name": "Time Shooter 3",
+        "unblock":true,
+        "image": "https://img.gamedistribution.com/6493b872f0564380a7adad671d1e0a57-512x512.jpeg",
+        "description": "Time Shooter 3: SWAT is a similar game to Superhot. Save the hostages from redmen!",
+        "url": "https://html5.gamedistribution.com/6493b872f0564380a7adad671d1e0a57/",
+        "category": "Games,Shooter"
+    },
+    {
+        "name": "Papas Freezeria",
+        "unblock":true,
+        "image": "/papas/freeze.jpg",
+        "description": "Papas Freezeria is an ice cream shop management game. You've just started an easy job at an ice cream shop on a laidback tropical island, but things get hectic when all of Papa Louie's loyal customers arrive on the island for vacation!",
+        "url": "https://www.getgames.io/games/waflash/?swf=papasfreezeria.swf",
+        "category": "Games,Simulation",
+        "cssInject": "/papa.css|300"
+    },
+    {
+        "name": "Papas Pastaria",
+        "unblock":true,
+        "image": "/papas/pastaria.png",
+        "description": "Papas Pastaria is a pasta shop management game. Head to Portallini and start your career as a pasta chef! You're in charge of Papa's Pastaria, where you'll take orders, cook noodles, add sauces and toppings, and toast breads to craft the perfect plate of pasta for your customers!",
+        "url": "https://www.getgames.io/games/waflash/?swf=papaspastaria.swf",
+        "category": "Games,Simulation",
+        "cssInject": "/papa.css|300"
+    },
+    {
+        "name": "Papas Pizzeria",
+        "unblock":true,
+        "image": "/papas/pizza.jfif",
+        "description": "Papas Pizzeria is a pizza shop management game. Help Roy run the pizzeria while Papa Louie is gone! You'll have to take orders, top and bake the pizzas, cut them to order, and present the finished pies to the waiting customers.",
+        "url": "https://www.getgames.io/games/waflash/?swf=papaspizzeria.swf",
+        "category": "Games,Simulation",
+        "cssInject": "/papa.css|300"
+    },
+    {
+        "name": "Papas Cupcakeria",
+        "unblock":true,
+        "image": "/papas/cupcake.png",
+        "description": "Papas Cupcakeria is a cupcake shop management game. Cook a ridiculous amount of delicious cupcakes for all your wacky customers in Papa's Cupcakeria!",
+        "url": "https://www.getgames.io/games/waflash/?swf=papascupcakeria.swf",
+        "category": "Games,Simulation",
+        "cssInject": "/papa.css|300"
+    },
+    {
+        "name": "Papas Burgeria",
+        "unblock":true,
+        "image": "/papas/burger.jpg",
+        "description": "Papas Burgeria is a burger shop management game. In this sequel to the award-winning hit game “Papa's Pizzeria”, you're headed back to the kitchen to run Papa Louie's new burger shop!",
+        "url": "https://www.getgames.io/games/waflash/?swf=papasburgeria.swf",
+        "category": "Games,Simulation",
+        "cssInject": "/papa.css|300"
+    },
+    {
+        "name": "Papas Sushiria",
+        "unblock":true,
+        "image": "/papas/sushi.jpg",
+        "description": "Papas Sushiria is a sushi shop management game. Your day takes a turn for the worse when you break Papa Louie's lucky cat statue. Is this to blame for the restaurant's underwhelming opening day? All we know is that Papa Louie left on a wild-eyed mission and you're now stuck running the restaurant.",
+        "url": "https://www.getgames.io/games/waflash/?swf=papassushiria.swf",
+        "category": "Games,Simulation",
+        "cssInject": "/papa.css|300"
+    },
+    {
+        "name": "Papas Pancakeria",
+        "unblock":true,
+        "image": "/papas/pancake.jpg",
+        "description": "Papas Pancakeria is a pancake shop management game. Help Prudence and Cooper run Papa's Pancakeria! You'll need to cook and stack pancakes, french toast, and waffles in Papa's latest time-management game.",
+        "url": "https://www.getgames.io/games/waflash/?swf=papaspancakeria.swf",
+        "category": "Games,Simulation",
+        "cssInject": "/papa.css|300"
+    },
+    {
+        "name": "Papas Taco Mia",
+        "unblock":true,
+        "image": "/papas/taco.png",
+        "description": "Papas Taco Mia is a taco shop management game. Papa Louie is branching out with a new taco restaurant and he's putting you in charge! Help Mitch and Maggie take orders, cook meats, and build tacos in Papa's Taco Mia!",
+        "url": "https://www.getgames.io/games/waflash/?swf=papastacomia.swf",
+        "category": "Games,Simulation",
+        "cssInject": "/papa.css|300"
+    },
+    {
+        "name": "Papas Cheeseria",
+        "unblock":true,
+        "image": "/papas/cheese.jpeg",
+        "description": "Papas Cheeseria is a grilled cheese shop management game. Craft colossal Grilled Cheese Sandwiches and pile on the Fries in Papa's Cheeseria!",
+        "url": "https://www.getgames.io/games/waflash/?swf=papascheeseria.swf",
+        "category": "Games,Simulation",
+        "cssInject": "/papa.css|300"
+    },
+    {
+        "name": "Papas Hot Doggeria",
+        "unblock":true,
+        "image": "/papas/hotdog.png",
+        "description": "Papas Hot Doggeria is a hot dog shop management game. It's opening day at Griller Stadium but the season tickets are all sold out! Looks like the only way to watch the games is to work for your old pal Papa Louie.",
+        "url": "https://www.getgames.io/games/waflash/?swf=papashotdoggeria.swf",
+        "category": "Games,Simulation",
+        "cssInject": "/papa.css|300"
+    },
+    {
+        "name": "Papas Wingeria",
+        "unblock":true,
+        "image": "/papas/wings.jfif",
+        "description": "Papas Wingeria is a chicken wing shop management game. You're in charge of Papa's Wingeria, where you'll need to take orders, fry up wings and things in the fryers, toss your wings in Papa's award-winning sauces, and arrange them just right with garnishes and sides for your loyal customers.",
+        "url": "https://www.getgames.io/games/waflash/?swf=papaswingeria.swf",
+        "category": "Games,Simulation",
+        "cssInject": "/papa.css|300"
+    },
+    {
+        "name": "Papas Donuteria",
+        "unblock":true,
+        "image": "/papas/donut.jpg",
+        "description": "Papas Donuteria is a donut shop management game. You just got a job at Papa's Donuteria in the whimsical town of Powder Point. Sure, the great pay and benefits are nice, but you took the job for that coveted Line-Jump Pass.",
+        "url": "https://www.getgames.io/games/waflash/?swf=papasdonuteria.swf",
+        "category": "Games,Simulation",
+        "cssInject": "/papa.css|300"
     }
 ]

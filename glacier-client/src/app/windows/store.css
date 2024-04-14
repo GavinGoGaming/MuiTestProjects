@@ -30,9 +30,6 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-.store-panel {
-    height: 100%;
-}
 .store-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -48,6 +45,7 @@
     cursor: pointer;
     transition: all 0.25s ease;
     text-align: center;
+    position: relative;
 }
 .store-grid-item:hover {
     background: rgba(255,255,255,0.1);
@@ -62,6 +60,15 @@
     text-align: center;
     font-weight: 600;
 }
+.store-grid-item > .rating {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.store-grid-item .fui-RatingItem__selectedIcon, .store-grid-item .fui-RatingDisplay__valueText {
+    color: #888 !important;
+}
 .store-right {
     /* display: flex; */
     position: absolute;
@@ -74,4 +81,28 @@
     width: calc(100% - 80px);
     background: rgba(0,0,0,0.15);
     height: calc(100% - 80px);
+}
+
+.pin {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: default;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.pin.color-no {
+    background: #f54c4c;
+}
+.pin.color-yes {
+    background: #4DC2FE;
+}
+
+.pin:hover {
+    filter: brightness(0.9);
 }

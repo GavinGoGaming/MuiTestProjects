@@ -40,7 +40,11 @@ export default function Window({
 
     useEffect(() => {
       if(defaultClosed) {
+        (document.getElementsByClassName(id)[0] as HTMLDivElement).style.display='none';
         close();
+        setTimeout(()=>{
+          (document.getElementsByClassName(id)[0] as HTMLDivElement).style.display='block';
+        }, 500);
       }
       (document.getElementsByClassName(id)[0] as HTMLDivElement).addEventListener('click', ()=>{
         let allWindows = document.querySelectorAll('.w11-window');
@@ -60,8 +64,11 @@ export default function Window({
             width: defaultSize.width,
             height: defaultSize.height,
           }}
+          minWidth={600}
+          minHeight={350}
           dragHandleClassName="w11-top"
           className={`w11-window ${color} ${id}`}
+          style={{zIndex:'4'}}
         >
             <div className="w11-top">
               <div className="w11-title">{title}</div>

@@ -143,13 +143,32 @@
   margin-left: 10px;
   display: flex;
 }
-.timeDate {
+.rightside-item {
   display: flex;
   padding: 0 8px;
   font-size: 11px;
-  flex-direction: column;
+  height: 90%;
+  margin-top: 2.5%;
   text-align: center;
+  user-select: none;
   justify-content: center;
+  border-radius: 5px;
+}
+.flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+.rightside-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
 }
 .w11-taskbar-app {
   display: flex;
@@ -302,7 +321,7 @@
 }
 .w11-content {
   /* margin-top: 40px; */
-  height: calc(100% - 40px);
+  height: calc(100% - 39px);
   overflow:scroll;
 }
 
@@ -355,4 +374,45 @@ a {
 
 .dcg-calculator-api-container .dcg-basic-keypad .dcg-keypad-btn-container .dcg-keypad-btn.dcg-btn-tall-blue, .dcg-calculator-api-container .dcg-basic-keypad .dcg-keypad-btn-container .dcg-keypad-btn.dcg-btn-short-blue {
   background: black;
+}
+.emoji {
+  background-image: url(/windows/emojiColor.png);
+  mask-image: url(/windows/emojiColor.png);
+}
+.rightside-item > svg {
+  margin: 10px 0px;
+  width: 1.2em;
+}
+
+/* grid with 10px gap, 100x75 items with image and text */
+.favorite-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  position: absolute;
+  top: 0px;
+  gap: 5px;
+  background: transparent;
+  width: 100%;
+  padding: 5px;
+  height: 100%;
+}
+.favorite-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  border: 1px solid #00000010;
+}
+.favorite-grid > div:hover {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.favorite-grid > div > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }

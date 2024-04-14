@@ -13,6 +13,7 @@ export default function FrameWindow({
   color="glass",
   seperateBorder="none",
   className="",
+  cssInject="",
   defaultClosed=true,
   defaultPosition={x:40,y:40},
   defaultSize={width:useWindowDimensions().width,height:useWindowDimensions().height-40},
@@ -21,6 +22,7 @@ export default function FrameWindow({
   title: string;
   url: string;
   id: string;
+  cssInject?: string;
   taskbarIconID?: string;
   color?: string;
   seperateBorder?: string;
@@ -40,7 +42,7 @@ export default function FrameWindow({
     return (
       <Window title={title} id={id} defaultPosition={defaultPosition} defaultSize={defaultSize} taskbarIconID={id} color={color} seperateBorder={seperateBorder} onClose={toggleOff} defaultClosed={defaultClosed} className={className}>
         <div className="window-full">
-          <iframe id={id} data-src={defaultUseUV ? xor.quickURL(url) : url} style={{border:'0px',position:'absolute',width:'100%',height:'calc(100% - 40px)'}}></iframe>
+          <iframe id={id} data-cssinject={cssInject} data-src={defaultUseUV ? xor.quickURL(url) : url} style={{border:'0px',position:'absolute',width:'100%',height:'calc(100% - 40px)'}}></iframe>
         </div>
       </Window>
     );

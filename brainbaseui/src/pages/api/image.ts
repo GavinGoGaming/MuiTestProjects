@@ -21,6 +21,7 @@ export default async function handler(
     */
     // Use fetch
     if(req.body.stage == 1) {
+        console.log('Started new AI request for: ' + req.body.model);
         fetch(BASE_URL + "/generate/async", {
             method: 'POST',
             headers: {
@@ -30,9 +31,11 @@ export default async function handler(
             body: JSON.stringify({
                 "prompt": req.body.prompt,
                 "params": {
-                "height": 512,
-                "width": 512
-                }
+                    "height": 512,
+                    "width": 512,
+                    "censor_nsfw": false
+                },
+                "models": [req.body.model]
             })
         })
         .then(res => res.json())
@@ -49,11 +52,8 @@ export default async function handler(
                 })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data["done"]);
                     if (data["done"] == true) {
                         image = data["generations"][0]['img'];
-                        console.log(image);
-                        console.log(xy['id']);
                         gens[xy['id']] = image;
                         clearInterval(interval);
                     }
@@ -62,7 +62,6 @@ export default async function handler(
             }, 6000);
         })
     }else if(req.body.stage == 2) {
-        console.log("Request made and gave " + gens[req.body.id])
         res.send({message: gens[req.body.id]=="incomplete"?"unfinished":"done", result: gens[req.body.id]});
     }
 }

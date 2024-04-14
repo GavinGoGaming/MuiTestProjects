@@ -202,7 +202,7 @@ export default function Chatbot() {
                 <Accordion>
                     <AccordionSummary>System Prompt</AccordionSummary>
                     <AccordionDetails>
-                        <textarea name="System Prompt" id="syspro" cols={30} rows={30} style={{padding:'10px',resize: 'none',borderRadius:'inherit',outline:'none',border:'none',width:'calc(100% - 0px)'}} defaultValue="Loading..."></textarea>
+                        <textarea name="System Prompt" id="syspro" cols={30} style={{padding:'10px',resize: 'none',borderRadius:'inherit',outline:'none',border:'none',width:'calc(100% - 0px)'}} defaultValue="Loading..."></textarea>
                         <Button id="update_system_prompt" sx={{width:'calc(100% - 0px)'}}>Update System Prompt</Button>
                     </AccordionDetails>
                 </Accordion>

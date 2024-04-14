@@ -13,7 +13,7 @@ export default function ChatBot() {
           aria-label="Soft tabs"
           value={index}
           onChange={(event, value) => {setIndex(value as number);document.querySelectorAll('.content').forEach(e=>e.classList.add('hidden'));document.querySelector('.content-'+value)?.classList.remove('hidden')}}
-          sx={{borderTopRightRadius:'10px'}}
+          sx={{borderTopLeftRadius:'10px',borderTopRightRadius:'10px'}}
         >
           <TabList variant="soft"
           sx={{borderTopRightRadius:'10px', borderTopLeftRadius:'10px'}}>

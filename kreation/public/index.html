@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
     <title>kreation</title>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="/simple.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
     <style>
@@ -45,7 +46,7 @@
             padding: 10px;
             border-radius: 10px;
             /* bubble on the left side, but not 50% */
-            margin-left: 0;
+            margin-left: 20px;
             margin-right: auto;
             max-width: 35%;
             position: relative;
@@ -57,13 +58,14 @@
             border-radius: 10px;
             /* bubble on the right side, but not 50% */
             margin-left: auto;
-            margin-right: 0;
+            margin-right: 20px;
             max-width: 35%;
             position: relative;
             /* overflow: auto; */
         }
         .bubble-left>.name, .bubble-right>.name {
             position: absolute;
+            width: 100vw;
             top: -25px;
             left: 3px;
         }
@@ -96,8 +98,11 @@
         .input > .message {
             width: 70%;
         }
-        .input > button, .input > .name, .input > select {
-            width: 15%;
+        .input > button, .input > .name {
+            width: 10%;
+        }
+        .input > select {
+            width: 14%;
         }
     </style>
 </head>
@@ -117,13 +122,16 @@
             </div> -->
         </div>
         <div class="input">
-            <!-- <select name="Channel" id="channel">
-                <option value="1219455695284473977">General</option>
-                <option value="1202104103711285248">In-Game</option>
-                <option value="1202477545614872596">Announcements</option>
-            </select> -->
-            <input type="text" class="name" placeholder="Username">
-            <input type="text" class="message" placeholder="Type a message...">
+            <select name="Avatar" id="avatar">
+                <option value="0">Avatar Blue</option>
+                <option value="1">Avatar Gray</option>
+                <option value="2">Avatar Green</option>
+                <option value="3">Avatar Yellow</option>
+                <option value="4">Avatar Red</option>
+                <option value="5">Avatar Pink</option>
+            </select>
+            <input type="text" class="name" placeholder="Username" maxlength="20">
+            <input type="text" class="message" placeholder="Type a message..." maxlength="2000">
             <button>Send</button>
         </div>
     </main>
@@ -137,10 +145,31 @@
         var input = document.querySelector('.input > .message');
         var namei = document.querySelector('.input > .name');
         var send = document.querySelector('.input > button');
-        var channel = document.querySelector('.input > select');
+        var avatar = document.querySelector('.input > select');
+
+        namei.addEventListener('change', function() {
+            window.localStorage.setItem('name', namei.value);
+        })
+        avatar.addEventListener('change', function() {
+            window.localStorage.setItem('avatar', avatar.value);
+        })
+        if(window.localStorage.getItem('name')) {
+            namei.value = window.localStorage.getItem('name');
+        }
+        if(window.localStorage.getItem('avatar')) {
+            avatar.value = window.localStorage.getItem('avatar');
+        }
 
         socket.on('general', (data) => {
             // console.log('received general chat');
+            if(data.name == namei.value) {
+                var bubble = document.createElement('div');
+                bubble.classList.add('bubble-right');
+                bubble.innerHTML = `<img src="${data.url}"><a class="name self">${data.name}</a>${data.message}`;
+                messages.appendChild(bubble);bubble.scrollIntoView();
+                return;
+            }
+
             var bubble = document.createElement('div');
             bubble.classList.add('bubble-left');
             bubble.innerHTML = `<img src="${data.url}"><a class="name">${data.name}</a>${data.message}`;
@@ -157,11 +186,11 @@
                 return;
             }
             var message = input.value;
-            var bubble = document.createElement('div');
-            bubble.classList.add('bubble-right');
-            bubble.innerHTML = '<img src="https://cdn.discordapp.com/embed/avatars/0.png"><a class="name self">You</a>' + message;
-            messages.appendChild(bubble);bubble.scrollIntoView();
-            socket.emit('send chat', {message: input.value, author: namei.value});
+            // var bubble = document.createElement('div');
+            // bubble.classList.add('bubble-right');
+            // bubble.innerHTML = `<img src="https://cdn.discordapp.com/embed/avatars/${avatar.value}.png"><a class="name self">You</a>` + message;
+            // messages.appendChild(bubble);bubble.scrollIntoView();
+            socket.emit('send chat', {message: input.value, author: namei.value, avatar: avatar.value});
             input.value = '';
         }
         document.addEventListener('keydown', function(e) {if (e.key === 'Enter') {

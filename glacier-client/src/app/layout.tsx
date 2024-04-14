@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "English 7H Period 6",
-  description: "glacier",
+  title: "GlacierOS",
+  description: "A stable reliable build of Glacier OS.",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="/windows/favicon_blue.png" />
+        <link rel="shortcut icon" href="/windows/settings.svg" />
       </head>
       <body>
         {children}

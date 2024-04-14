@@ -24,11 +24,10 @@ export default function WorkersPane() {
       py: '20px',
     }}>
         <WorkerBox blurb="Founder and cheif operating officer of Klash. Fluent developer in C/C#/C++, JS/TS, Java, React, Vue, HTML/CSS, Lua, Python" url="https://gavingogaming.com" imageUrl="/gavin_logo.jpg" name="Gavin" color="#ff8100" title="CEO"/>
-        <WorkerBox blurb="I'm an aspiring game developer with a knack for writing." url="/personal/bailey" imageUrl="https://cdn.discordapp.com/avatars/896539895449939979/a392e88256e482f75c65867491f478de.webp?size=128" name="Bailey" color="#42f5da" title="GAMEDEV"/>
-        <WorkerBox blurb="Cheif product manager and co-ceo for Klash's Games." url="/personal/koen" imageUrl="https://yt3.googleusercontent.com/MerTwG8HWAdS1vEa9lvXTDn1cqYX1_0PnbeaRlCSNsP8P1hcuexParKiSNitURyspcoKjTM=s176-c-k-c0x00ffffff-no-rj" name="Koen" color="#5203A9" title="PROD MGR"/>
-        <WorkerBox blurb="Developer & builder working on the Roblox team." url="/personal/christopher" imageUrl="https://yt3.googleusercontent.com/ytc/APkrFKY5qppMRQPYO8jW6VDgIvzY5PW0j2stk9wIez7Umg=s176-c-k-c0x00ffffff-no-rj" name="Christopher" color="rgb(255 0 241)" title="DEV"/>
-        <WorkerBox blurb="Head UI/UX Design consultant for Klash." color="#B4DA55" name="Jon Fox" url="https://jonfoxux.com" imageUrl={jfux} title='UX/UI'/>
-        <WorkerBox blurb="Lead officer for storyboarding & developer/builder here at Klash." color="#b30202" name="Reality" url="/personal/reality" imageUrl="https://cdn.discordapp.com/avatars/799351261903454238/b07ed2d7a57c2d42eb5fd87df7a9d998.webp?size=128" title='STORY/DEV'/>
+        <WorkerBox blurb="Cheif product manager and co-ceo for Klash's Games." url="" imageUrl="https://yt3.googleusercontent.com/MerTwG8HWAdS1vEa9lvXTDn1cqYX1_0PnbeaRlCSNsP8P1hcuexParKiSNitURyspcoKjTM=s176-c-k-c0x00ffffff-no-rj" name="KeiKa" color="#5203A9" title="PROD MGR"/>
+        <WorkerBox blurb="Developer & builder working on the Roblox team." url="" imageUrl="https://yt3.googleusercontent.com/ytc/APkrFKY5qppMRQPYO8jW6VDgIvzY5PW0j2stk9wIez7Umg=s176-c-k-c0x00ffffff-no-rj" name="DaEpicBoi" color="rgb(255 0 241)" title="ROBLOX"/>
+        <WorkerBox blurb="Head UI/UX Design consultant for Klash." color="#ffff0075" name="Jon Fox" url="https://jonfoxux.com" imageUrl={jfux} title='UI/UX'/>
+        <WorkerBox blurb="Lead officer for storyboarding & developer/builder here at Klash." color="#b30202" name="Reality" url="/personal/reality" imageUrl="https://yt3.googleusercontent.com/ZJxSKafIrzya9OO0i9lRQKfkH1kWgN-VJfUNiYGy-2AsEuHdl3UgcJJ7u5plekmlGlms7wyLvQ=s176-c-k-c0x00ffffff-no-rj" title='STORY'/>
     </Sheet>
   );
 }

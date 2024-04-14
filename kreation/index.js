@@ -2,6 +2,7 @@ const express = require('express');
 const { Server } = require("socket.io");
 const { createServer } = require('node:http');
 const { Client, Events, GatewayIntentBits, Webhook } = require('discord.js');
+require('dotenv').config();
 
 function sendRecentsTo(socket) {
     client.channels.fetch('1219455695284473977').then(channel => {
@@ -48,12 +49,16 @@ function send(channel, message, name, url) {
         socket.emit(channel, { message, name, url });
     });
 }
-function sendToDiscord(message, author) {
+function sendToDiscord(message, author, avatar) {
     client.channels.fetch('1219455695284473977').then(channel => {
         generalwebhook.send({
             content: message,
-            username: author
+            username: author,
+            avatarURL: 'https://cdn.discordapp.com/embed/avatars/'+avatar+'.png'
         });
+    });
+    sockets.forEach(socket => {
+        socket.emit('general', { message, name: author, url: 'https://cdn.discordapp.com/embed/avatars/'+avatar+'.png' });
     });
 }
 
@@ -71,8 +76,8 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         sockets = sockets.filter(s => s !== socket);
     });
-    socket.on('send chat', ({message, author}) => {
-      sendToDiscord(message, author);
+    socket.on('send chat', ({message, author, avatar}) => {
+      sendToDiscord(message, author, avatar);
     });
 });
 
@@ -80,4 +85,28 @@ server.listen(3000, function () {
     console.log('kreation discord');
 });
 
-client.login(`MTIxOTQ1MjQ1NTg3MjYyNjc5OQ.G-Hhei.JQtfuPJbOvLX5T6MED8ttqmixru43X7Fki5OXA`);
+client.login(process.env.TOKEN);
+
+process.stdin.resume(); // so the program will not close instantly
+
+function exitHandler(options, exitCode) {
+    // if (options.cleanup) console.log('clean');
+    // if (exitCode || exitCode === 0) console.log(exitCode);
+    
+    generalwebhook.delete();
+
+    if (options.exit) process.exit();
+}
+
+// do something when app is closing
+process.on('exit', exitHandler.bind(null,{cleanup:true}));
+
+// catches ctrl+c event
+process.on('SIGINT', exitHandler.bind(null, {exit:true}));
+
+// catches "kill pid" (for example: nodemon restart)
+process.on('SIGUSR1', exitHandler.bind(null, {exit:true}));
+process.on('SIGUSR2', exitHandler.bind(null, {exit:true}));
+
+// catches uncaught exceptions
+process.on('uncaughtException', exitHandler.bind(null, {exit:true}));

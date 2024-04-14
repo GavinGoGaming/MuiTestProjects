@@ -1,6 +1,7 @@
 'use client';
 import { ThemeProvider } from "@emotion/react"
 import { CssVarsProvider, extendTheme } from "@mui/joy";
+import SessionProvider from "./SessionProvider";
 
 var theme = extendTheme({
     colorSchemes: {
@@ -27,7 +28,11 @@ export default function Root({
   }) {
     return (
         <CssVarsProvider defaultMode="dark" theme={theme}>
-            <ThemeProvider theme={theme}>{children}</ThemeProvider>
+            <ThemeProvider theme={theme}>
+                <SessionProvider>
+                    {children}
+                </SessionProvider>
+            </ThemeProvider>
         </CssVarsProvider>
     )
   }

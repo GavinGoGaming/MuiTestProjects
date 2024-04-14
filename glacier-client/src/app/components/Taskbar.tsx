@@ -1,6 +1,9 @@
 'use client';
 import { useEffect } from "react";
 import Draggable from "react-draggable";
+import { Battery10Regular, Battery5Regular, Battery1Regular, Wifi1Regular, WifiOffRegular, Speaker2Regular } from "@fluentui/react-icons";
+import { useBattery } from "@uidotdev/usehooks";
+import useOnlineStatus from '../utils/useOnlineStatus';
 
 // class taskbarapp
 export class TaskbarApp {
@@ -19,6 +22,9 @@ export default function Taskbar({
   }: Readonly<{
     apps: TaskbarApp[];
   }>) {
+    const battery = useBattery();
+    const wifi = useOnlineStatus();
+
     function toggle(app: TaskbarApp, addCurrent: boolean = false) {
         let taskbarApp = document.getElementById(app.window+'-tb-app');
         if(taskbarApp) {
@@ -62,8 +68,13 @@ export default function Taskbar({
             ))}
 
             <div className="w11-rightside">
-                <div className="timeDate">
-                    <div id='tbtime'>{new Date().getHours()>12?new Date().getHours()-12:new Date().getHours()}:{new Date().getMinutes()} {new Date().getHours()>12?'PM':'AM'}</div>
+                <div className="rightside-item align-center">
+                    {wifi ? <Wifi1Regular fontSize={'20px'} /> : <WifiOffRegular fontSize={'20px'} />}
+                    <Speaker2Regular fontSize={'20px'} />
+                    {battery.level as number > 0.5 ? <Battery10Regular fontSize={'20px'} /> : (battery.level as number > 0.2 ? <Battery5Regular fontSize={'20px'} /> : <Battery1Regular fontSize={'20px'} />)}
+                </div>
+                <div className="rightside-item flex-column">
+                    <div id='tbtime'>{new Date().getHours()>12?new Date().getHours()-12:new Date().getHours()}:{new Date().getMinutes()<10?'0'+new Date().getMinutes():new Date().getMinutes()} {new Date().getHours()>12?'PM':'AM'}</div>
                     <div id='tbdate'>{new Date().getMonth()+1}/{new Date().getDay()}/{new Date().getFullYear()}</div>
                 </div>
             </div>

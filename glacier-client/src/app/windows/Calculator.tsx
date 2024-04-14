@@ -1,6 +1,5 @@
 import { Dropdown, Input, Option, OptionOnSelectData, SelectionEvents } from "@fluentui/react-components";
 import Window from "../components/Window";
-import { ScientificCalculator } from "desmos-react";
 
 export default function CalculatorApp() {
     return (

@@ -31,10 +31,12 @@ import CalculatorApp from "./windows/Calculator";
 import EdgeApp from "./windows/MicrosoftEdge";
 import CameraApp from "./windows/Camera";
 import StoreApp from "./windows/Store";
-import AppListHelper, { getApps } from "./utils/AppListHelper";
+import AppListHelper, { getApps, getWithName } from "./utils/AppListHelper";
 import FrameWindow from "./components/FrameWindow";
 import StoreApps from "./windows/store/StoreApps";
 import MoreIconsApp from "./windows/MoreIcons";
+import MinecraftLauncherApp from "./windows/MinecraftLauncher";
+import FavoriteAppHelper from "./utils/FavoriteAppHelper";
 
 export default function Home() {
   useEffect(() => {
@@ -58,6 +60,7 @@ export default function Home() {
     <FluentProvider theme={webDarkTheme}>
     <main>
       <AppListHelper/>
+
       <Taskbar apps={[
         {name: "Settings", icon: "/windows/settings.svg", window: "settings"},
         {name: "File Explorer", icon: "/windows/icons/explorer.png", window: "file-explorer"},
@@ -74,8 +77,12 @@ export default function Home() {
       <CameraApp/>
       <StoreApp/>
       <StoreApps/>
+      <MinecraftLauncherApp/>
 
       <MoreIconsApp/>
+      <FavoriteAppHelper/>
+
+      
     </main>
     </FluentProvider>
   );

@@ -11,11 +11,18 @@ export async function getApps() {
 export function getWithCategory(category: string) {
     return apps.filter(app => app.category.split(",").includes(category));
 }
+export  function getWithName(name: string) {
+    return apps.find(app => app.name === name);
+}
 
 async function ensureDataLoaded() {
     if (apps.length === 0) {
         const response = await fetch('/applist.json');
         const data = await response.json();
+        // replace all %BASE% in app urls with the origin (ex. %BASE%/test -> http://localhost:3000/test)
+        data.forEach((app: any) => {
+            app.url = app.url.replace(/%BASE%/g, window.location.origin);
+        });
         apps = data;
     }
 }
