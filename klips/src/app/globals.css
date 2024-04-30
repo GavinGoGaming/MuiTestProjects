@@ -1,0 +1,181 @@
+  :root {
+    --max-width: 1100px;
+    --border-radius: 12px;
+    --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+      "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+      "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+
+    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+    --secondary-glow: linear-gradient(to bottom right,
+        rgba(1, 65, 255, 0),
+        rgba(1, 65, 255, 0),
+        rgba(1, 65, 255, 0.3));
+
+    --tile-start-rgb: 2, 13, 46;
+    --tile-end-rgb: 2, 5, 19;
+    --tile-border: conic-gradient(#ffffff80,
+        #ffffff40,
+        #ffffff30,
+        #ffffff20,
+        #ffffff10,
+        #ffffff10,
+        #ffffff80);
+
+    --callout-rgb: 20, 20, 20;
+    --callout-border-rgb: 108, 108, 108;
+    --card-rgb: 100, 100, 100;
+    --card-border-rgb: 200, 200, 200;
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
+    }
+  }
+
+  div.left {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 20px;
+    /* takes up 20% of screen */
+    width: 20%;
+    background: #111;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  div.right {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 20px;
+    /* takes up 80% of screen */
+    width: calc(80% - 8px);
+    margin-left: 8px;
+    background: #111;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .viewing > .left {
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: scroll;
+  }
+  .viewing > .left > #start {
+    display: none;
+  }
+  .left > .klips {
+    display: none;
+  }
+  .viewing > .left > .klips {
+    display: flex;
+    flex-direction: column;
+  }
+  .viewing > .right > .warning {
+    display: none;
+  }
+  .right > video {
+    width: 90%;
+  }
+  .klip {
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #ffffff40;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .klip > video {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+  .info {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: #00000050;
+    width: 100%;
+    padding: 5px;
+  }
+  .klip > .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  /* mobile has left as top 30% and right as bottom 70%, with a horizontal clip list */
+  @media only screen and (max-width: 850px) {
+    div.left {
+      width: 100%;
+      height: 20%;
+      overflow-x: scroll;
+      top: 0;
+      left: 0;
+      padding: 0px;
+    }
+    .viewing > div.left > h1, h6 {
+      display: none;
+    }
+    div.right {
+      width: 100%;
+        min-height: 80vh;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        top: auto;
+    }
+    .klips {
+      width: 100%;
+      height: 100%;
+    }
+    .klip {
+      min-width: 200px;
+      height: calc(100% - 10px);
+      margin: 5px 10px;
+    }
+    .viewing > .left {
+      justify-content: center;
+      align-items: center;
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+    .viewing > .left > .klips {
+      display: flex;
+      flex-direction: row;
+    }
+  }

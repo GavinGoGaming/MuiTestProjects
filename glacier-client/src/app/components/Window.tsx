@@ -1,7 +1,6 @@
 'use client';
 import { useEffect } from "react";
 import Draggable from "react-draggable";
-import { Resizable, ResizableBox } from "react-resizable";
 import { Rnd } from "react-rnd";
 
 export default function Window({

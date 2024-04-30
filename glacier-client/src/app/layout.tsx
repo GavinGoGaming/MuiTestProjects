@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SelectedStyle from "./SelectedStyle";
 
 export const metadata: Metadata = {
   title: "GlacierOS",
@@ -13,6 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <SelectedStyle/>
         <link rel="shortcut icon" href="/windows/settings.svg" />
       </head>
       <body>

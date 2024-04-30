@@ -1,10 +1,10 @@
-import { Button, Dropdown, Input, Option, OptionOnSelectData, SelectionEvents } from "@fluentui/react-components";
+import { Button, Dropdown, Input, Option, OptionOnSelectData, Persona, SelectionEvents } from "@fluentui/react-components";
 import Window from "../components/Window";
 import './settings.css';
 import { useEffect, useState } from "react";
 import Emoji from "../components/Emoji";
 import xor from "../utils/XOR";
-
+let wallpapers = ["Motion Layered", "Sphere Green", "Sphere Purple", "Light Wave", "Light Fluent", "Dark Fluent", "Light Sand", "Windows Kali", "Motion Cones", "Motion Ribbon", "Motion Blobs", "Sun Daytime", "Sun Mountain", "Sun Setting", "Sun Desert", "Fluent Blue", "Fluent Green", "Fluent Pink", "Fluent Gray", "Windows 11 Dark", "Windows 11 Light", "Sun Nighttime", "Mac Mojave", "Mac Catalina", "Mac Big Sur", "Mac Monterey", "Chrome OS Default", "Frosty Glaciers"];
 function Personalization() {
   
   const onChange = (event: SelectionEvents, data: OptionOnSelectData): void => {
@@ -29,29 +29,33 @@ function Personalization() {
     <br />
     <b>Themes</b><br/>
     Background: <Dropdown id="background-select" onOptionSelect={onChange} placeholder="Choose a new wallpaper..." appearance="underline">
-      <Option value="23">Mac Mojave</Option>
-      <Option value="24">Mac Ocean</Option>
-      <Option value="25">Mac Big Sur</Option>
-      <Option value="26">Mac Monterey</Option>
-      <Option value="2">Sphere (Blue/Green)</Option>
-      <Option value="3">Sphere (Blue/Red)</Option>
-      <Option value="1">Motion Layers</Option>
-      <Option value="9">Motion Cones</Option>
-      <Option value="10">Motion Ribbon</Option>
-      <Option value="11">Motion Liquid</Option>
-      <Option value="14">Sunrise Ocean</Option>
-      <Option value="12">Daytime Ocean</Option>
-      <Option value="22">Sunset Ocean</Option>
-      <Option value="13">Sunrise Lake</Option>
-      <Option value="15">Sunrise Desert</Option>
-      <Option value="16">Fluent Blue</Option>
-      <Option value="17">Fluent Green</Option>
-      <Option value="18">Fluent Pink</Option>
-      <Option value="19">Fluent Gray</Option>
-      <Option value="6">Fluent Black</Option>
-      <Option value="20">Windows Dark</Option>
-      <Option value="21">Windows Light</Option>
-      <Option value="8">Windows Kali</Option>
+      {wallpapers.map((wallpaper, index) => {
+        return <Option key={index+1} value={`${index+1}`} text={wallpaper}>
+          <Persona
+          name={wallpaper}
+          secondaryText={`#${index+1}`}
+          avatar={{
+              image: {
+                  src: `/windows/wallpaper${index+1}.jpg`
+              },
+              style: {
+                  borderRadius: '8px',
+                  width: '50px'
+              }
+          }}
+          />
+      </Option>
+      })}
+    </Dropdown>
+    <br/>
+    OS Style: <Dropdown onOptionSelect={(event, data) => {
+      window.localStorage.setItem('os', data.optionValue as string);
+      window.location.reload();
+    }}>
+      <Option value={'windows'}>Windows 11</Option>
+      <Option value={'macos'}>Mac OS</Option>
+      <Option value={'chromeos'}>Chrome OS</Option>
+      <Option value={'glacieros'}>Glacier</Option>
     </Dropdown>
     </>
   )
@@ -59,7 +63,11 @@ function Personalization() {
 
 function Accounts() {
   return (
-    <h1>Accounts</h1>
+    <>
+      <h1>"glacier"</h1>
+      <p>is this thing on?</p>
+      <p style={{fontSize:'4px'}}>i hope so</p>
+    </>
   );
 }
 

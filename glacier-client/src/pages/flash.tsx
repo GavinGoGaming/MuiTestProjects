@@ -1,6 +1,5 @@
 'use client';
 // import { ReadonlyURLSearchParams, useParams, useRouter, useSearchParams } from "next/router";
-import { Flash } from "react-ruffle";
 import './flash.css';
 import React, { useEffect, useState } from "react"
 import createWaflashModule, { initDragAndDrop } from "../../public/wasm/waflash.mjs"

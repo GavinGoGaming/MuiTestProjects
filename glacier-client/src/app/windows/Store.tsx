@@ -31,7 +31,7 @@ export default function StoreApp() {
   }
 
   return (
-    <Window title="Microsoft Store" defaultPosition={{x: 0, y:0}} defaultSize={{width: width-20, height: height-70}} id="store" taskbarIconID="store" color={'gray'}>
+    <Window title="Microsoft Store" defaultSize={{width: width-20, height: height-70}} id="store" taskbarIconID="store" color={'gray'}>
       <div className="window-full">
         <div className="store-left">
           <div className={"store-nav-icon sni-home " + (currentPanel==='home'?'active':'')} onClick={enable('home')}><HomeFilled fontSize={'22px'}/></div>

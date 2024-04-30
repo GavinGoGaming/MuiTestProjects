@@ -17,6 +17,7 @@ import { DarkModeOutlined, LightModeOutlined } from '@mui/icons-material';
 import HrefBtn from './HrefBtn';
 import SwapVerticalCircleRoundedIcon from '@mui/icons-material/SwapVerticalCircleRounded';
 import SwapCallsRounded from '@mui/icons-material/SwapCallsRounded';
+import MailChimp from './Mailchimp';
 
 export default function Footer() {
     React.useEffect(()=>{
@@ -36,22 +37,19 @@ export default function Footer() {
         }} variant='soft'>
             <div style={{width:'100%',paddingBottom:'20px'}}>
                 <Typography className="topftrtitle" textAlign={'center'}>
-                Enter our Designing Empires giveaway to win :
+                Sign Up to our mailing list
                 </Typography>
                 </div>
             <div style={{width:'100%',paddingBottom:'80px'}}>
                     <Typography className="btmftrevent" textAlign={'center'}>
-                    - Authentic Star Wars Episode 1 Crew Jacket<br/>
-                    - 2 tickets to Disneyland Galaxy's Edge<br/>
-                    - a cameo appearance in Designing Empires Season 2<br/>
-                    - AND MORE
+                    to get updates about Designing Empires!
                     </Typography>
             </div>
             <div style={{width:'100%',display: 'flex',justifyContent: 'center'}}>
                 {/* MailChimp moved to component and unused */}
-                <a className="rcptr" href="http://www.rafflecopter.com/rafl/display/7e9ea52b1/" rel="nofollow" data-raflid="7e9ea52b1" data-theme="classic" data-template="65d1070792573a04270e64bc" id="rcwidget_d2ti91ic">a Rafflecopter giveaway</a>
+                {/* <a className="rcptr" href="http://www.rafflecopter.com/rafl/display/7e9ea52b1/" rel="nofollow" data-raflid="7e9ea52b1" data-theme="classic" data-template="65d1070792573a04270e64bc" id="rcwidget_d2ti91ic">a Rafflecopter giveaway</a> */}
                 {/* <iframe id="rcwidget_rafldisplaypage" frameBorder="0" style={{width: "402px", height: "759px", margin: "0px auto", display: "block"}} src="https://widget-prime.rafflecopter.com/classic/19dbbbb/main.html"></iframe> */}
-                
+                <MailChimp/>
             </div>
             <div style={{width:'100%',display: 'flex',justifyContent: 'center',paddingTop:'80px'}}>
                 <Typography className="topftrtitle">

@@ -17,7 +17,7 @@ export default function RootLayout({
         <meta name="description" content="A parody web series about the worst client ever.... coming February 25th to YouTube"/>
         <meta name="keywords" content="starwars,parody,fanfilm,comedy,theforce,yoda,grogu,mandolorian,skywalker,darthvader,firstorder,empire,designingempires,lucas,jedi"/>
         <meta name="robots" content="index, follow"/>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="language" content="English"/>
         <meta property="og:title" content="Designing Empires" />
         <meta property="og:url" content="https://designingempires.com/" />

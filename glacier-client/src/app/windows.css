@@ -134,6 +134,12 @@
   justify-content: center;
   z-index: 999;
 }
+.mac-only {
+  display: none;
+}
+.windows-only-flex {
+  display: flex;
+}
 .w11-rightside {
   position: absolute;
   top: 0;
@@ -389,7 +395,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, 100px);
   position: absolute;
-  top: 0px;
+  top: 32px;
   gap: 5px;
   background: transparent;
   width: 100%;

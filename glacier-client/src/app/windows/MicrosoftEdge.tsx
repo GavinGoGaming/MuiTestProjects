@@ -67,7 +67,7 @@ export default function EdgeApp() {
                     value="https://www.google.com/search?q=%s"
                     type="hidden"
                 />
-                <Input id="uv-address" type="text" style={{width:'calc(80% - 5px)'}} placeholder="Search the top of the iceberg" />
+                <Input id="uv-address" type="text" style={{width:'calc(80% - 5px)'}} placeholder="Search the top of the iceberg" autoComplete={"false"} />
                 <Button type="submit" color={'primary'} style={{width:'20%',marginLeft:'5px',marginBottom:'3px'}} icon={<SearchRegular/>} iconPosition="after">Search</Button>
             </form>
             <iframe id="uv-iframe" src="" className='hidden' style={{width:'100%',height:'88%',position:'absolute',border:'none'}} frameBorder={0}/>
