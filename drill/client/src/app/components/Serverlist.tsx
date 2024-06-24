@@ -18,33 +18,34 @@ import Serverchatbox from './Serverchatbox';
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-export default function Serverlist({servers, pms}: Readonly<{servers: {name: string, id: number}[],pms: {name: string, uid: number}[]}>) {
-    const [open, setOpen] = React.useState('S0');
-
+export default function Serverlist() {
     return (
-        <React.Fragment>
+        <>
+        <div className="topdrawer">
+            <Button variant="plain"><LanguageRounded /></Button>
+            <Button variant="plain"><SupervisedUserCircle /></Button>
+            <Button variant="plain"><SupervisedUserCircle /></Button>
+            <Button variant="plain"><LanguageRounded /></Button>
+            <Button variant="plain"><SupervisedUserCircle /></Button>
+        </div>
             <Drawer open={true} sx={{width:'350px'}}>
                 <DialogTitle>my drill zones</DialogTitle>
                 <DialogContent>
                     <List>
-                        {servers.map((server, index) => (
-                            <ListItem key={index}>
-                                <ListItemButton onClick={() => {setOpen('S'+server.id)}}>
+                            <ListItem key={1}>
+                                <ListItemButton>
                                     <ListItemDecorator><LanguageRounded /></ListItemDecorator>
-                                    <ListItemContent>{server.name}</ListItemContent>
+                                    <ListItemContent>name</ListItemContent>
                                     <Typography level="body-sm">space</Typography>
                                 </ListItemButton>
                             </ListItem>
-                        ))}
-                        {pms.map((pm, index) => (
-                            <ListItem key={index}>
-                                <ListItemButton onClick={() => setOpen('P'+pm.uid)}>
+                            <ListItem key={2}>
+                                <ListItemButton>
                                     <ListItemDecorator><SupervisedUserCircle /></ListItemDecorator>
-                                    <ListItemContent>{pm.name}</ListItemContent>
+                                    <ListItemContent>name</ListItemContent>
                                     <Typography level="body-sm">user</Typography>
                                 </ListItemButton>
                             </ListItem>
-                        ))}
                     </List>
                 </DialogContent>
                 <Box
@@ -64,7 +65,7 @@ export default function Serverlist({servers, pms}: Readonly<{servers: {name: str
                     </div>
                 </Box>
             </Drawer>
-            <Serverchatbox open={open}/>
-        </React.Fragment>
+            <Serverchatbox/>
+        </>
     );
 }

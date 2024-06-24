@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <main>
       <CssVarsProvider defaultMode={"dark"}>
-        <Serverlist servers={[{name: "gavin's space", id: 0}]} pms={[{name: 'alec', uid: 0}]}/>
+        <Serverlist/>
       </CssVarsProvider>
     </main>
   );

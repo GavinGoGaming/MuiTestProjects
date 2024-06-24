@@ -106,7 +106,7 @@
   .viewing > .right > .warning {
     display: none;
   }
-  .right > video {
+  .right > .video_player {
     width: 90%;
   }
   .klip {
@@ -116,7 +116,7 @@
     cursor: pointer;
     margin-top: 10px;
   }
-  .klip > video {
+  .klip > .video_player {
     width: 100%;
     height: 100%;
     border-radius: 5px;

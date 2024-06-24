@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental: {
-      serverActions: {
-        bodySizeLimit: '2mb',
-      },
-    }
+    images: {
+        domains: ['hitchd-cdn2.imgix.net', 'source.unsplash.com'],
+    },
 };
 
 export default nextConfig;
