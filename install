@@ -1,6 +1,6 @@
 #!/bin/bash
 echo ""
-echo " ------- PROJECT INSTALLING ------- "
+echo " ------ PROJECT INSTALLING ------ "
 echo "         by @gavingogaming        "
 echo " Usage: install <project> [fluent|material|joy]"
 echo " --------------------------------- "
